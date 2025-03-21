@@ -1,3 +1,12 @@
+##################################################
+# Fonction qui permet de corriger les "?" dans la colonne $unit et inscrire 
+# l'information d'incertitude dans la colonne notes                        
+#
+# Auteur: William Simard, Zoé Chol, Kyara Boisvert 
+# Date: 21-03-2025
+##################################################
+
+
 corriger.unit <- function(notesvides) {
   notesvides$notes <- as.character(notesvides$notes)
   # Utilisation de grepl pour identifier les "?" et appliquer la condition sur la colonne "notes"
