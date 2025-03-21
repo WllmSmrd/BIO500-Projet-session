@@ -1,4 +1,13 @@
-# Fonction pour créer un tableau où chaque ligne correspond a une abondance d'une espece pour une annee a un endroit precis#
+##################################################
+# Fonction qui permet de séparer les annees et abondances pour avoir 1 ligne = 1 année, 1 abondance                            
+#
+# Auteur: William Simard, Zoé Chol, Kyara Boisvert 
+# Date: 21-03-2025
+##################################################
+
+
+# Le code suivant permet de créer un tableau où chaque ligne correspond a une abondance 
+# d'une espece pour une annee a un endroit precis.
 
 library(tidyverse)
 
