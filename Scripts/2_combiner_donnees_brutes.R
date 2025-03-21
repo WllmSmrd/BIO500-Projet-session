@@ -1,4 +1,11 @@
-#fonction pour combiner tous les csv#
+##################################################
+# Fonction qui permet d'importer et combiner tous les csv d'observations en un seul objet                               
+#
+# Auteur: William Simard, Zoé Chol, Kyara Boisvert 
+# Date: 21-03-2025
+##################################################
+
+
 library("dplyr")
 
 combiner.csv <- function(){
