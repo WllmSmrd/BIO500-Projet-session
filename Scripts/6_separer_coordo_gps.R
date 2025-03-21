@@ -1,4 +1,12 @@
-# Séparer les coordonnées GPS en une colonne x et une colonne y
+##################################################
+# Fonction qui permet de séparer les coordonnees gps en colonnes x et y                         
+#
+# Auteur: William Simard, Zoé Chol, Kyara Boisvert 
+# Date: 21-03-2025
+##################################################
+
+
+# Le code suivant permet de séparer les coordonnées GPS en une colonne x et une colonne y.
 
 library(stringr)
 
