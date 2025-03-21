@@ -1,5 +1,12 @@
+##################################################
+# Fonction qui permet d'évaluer la présence de caractères spéciaux problématiques                        
+#
+# Auteur: William Simard, Zoé Chol, Kyara Boisvert 
+# Date: 21-03-2025
+##################################################
 
-### Détecter des potentiels caractères problématiques pour chaque colonne 
+
+# Le code suivant permet de détecter des potentiels caractères problématiques pour chaque colonne.
 
 Detecter.special.char <- function(caracteres_speciaux){
   columns_to_check <- c("observed_scientific_name", "years", "unit", "values", "original_source", 
