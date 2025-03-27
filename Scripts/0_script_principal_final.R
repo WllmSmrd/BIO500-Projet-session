@@ -64,7 +64,7 @@ ajout.notes <- creer.col.notes(ab.annee.x.y)
 
 # 10/ Corriger les "?" dans la colonne $unit et inscrire l'information d'incertitude dans la colonne notes
 source("./Scripts/10_corriger_unit.R")
-obs.clean <- corriger.unit(ajout.notes)
+obs.corrigee <- corriger.unit(ajout.notes)
 
 # 11/ Évaluer la présence de caractères spéciaux problématiques pour les observations
 source("./Scripts/11_detecter_special_char_taxo.R")
@@ -72,8 +72,16 @@ Detecter.special.char.taxo(taxo)
 #Pour - : on observe "-" dans $vernacular_fr et c'est normal puisque le nom français des espèces peut contenir ce symbole. Donc c'est ok
 
 # 12/ Insérer des NA dans les cases vides de l'objet taxo (qui est maintenant prêt à être injecté)
-source("./Scripts/11_inserer_NA.R")
-table_taxo <- insert.na(taxo)
+source("./Scripts/12_inserer_NA.R")
+taxo.NA <- insert.na(taxo)
+
+# 13/ Assigner le bon type de données à chaque colonne du fichier observations       
+source("./Scripts/13_assigner_type_obs.R")
+obs.clean <- assigner.type.obs(obs.corrigee)
+
+# 14/ Assigner le bon type de données à chaque colonne du fichier observations       
+source("./Scripts/14_assigner_type_taxo.R")
+table_taxo <- assigner.type.taxo(taxo.NA)
 
 
 
