@@ -5,7 +5,7 @@
 # Date: 21-03-2025
 ##################################################
 
-Creer.table.obs <- function(){
+Creer.table.obs <-
   "CREATE TABLE observations (
       id_obs                  INTEGER PRIMARY KEY AUTOINCREMENT,
       species                 VARCHAR(100),
@@ -18,8 +18,7 @@ Creer.table.obs <- function(){
       FOREIGN KEY (species) REFERENCES taxonomie(observed_scientific_name),
       FOREIGN KEY (source) REFERENCES 'references'(id)
   )"
-dbSendQuery(abondances_bd,Creer_obs)
-}
+
 
 
 

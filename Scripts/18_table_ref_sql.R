@@ -5,7 +5,7 @@
 # Date: 21-03-2025
 ##################################################
 
-Creer.table.ref <- function(){
+Creer.table.ref <-
   "CREATE TABLE 'references' (
       id                    INTEGER PRIMARY KEY AUTOINCREMENT,
       original_source       VARCHAR(100),
@@ -14,10 +14,9 @@ Creer.table.ref <- function(){
       publisher             VARCHAR(30),
       intellectual_rights   BOLEAN,
       license               VARCHAR(100),
-      owner                 VARCHAR(30),
+      owner                 VARCHAR(30)
   )"
-dbSendQuery(abondances_bd,Creer_ref)
-}
+
 
 
 

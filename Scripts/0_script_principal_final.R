@@ -10,6 +10,7 @@
 install.packages("dplyr")
 install.packages("tidyverse")
 install.packages("stringr")
+install.packages("RSQLite")
 
 
 
@@ -103,12 +104,12 @@ abondances_bd <- dbConnect(RSQLite::SQLite(), dbname=("./database_series_tempore
 
 #Création de la table de taxonomie dans la base de données SQL
 source("./Scripts/17_table_taxo_sql.R")
-Creer.table.taxo()
+dbSendQuery(abondances_bd,Creer.table.taxo)
 
 #Création de la table references dans la base de données SQL
-source(".Scripts/18_table_ref_sql.R")
-Creer.table.ref()
+source("./Scripts/18_table_ref_sql.R")
+dbSendQuery(abondances_bd,Creer.table.ref)
 
 #Création de la table d'observations dans la base de données SQL
 source("./Scripts/19_table_obs_sql.R")
-Creer.table.obs()
+dbSendQuery(abondances_bd,Creer.table.obs)

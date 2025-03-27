@@ -5,7 +5,7 @@
 # Date: 21-03-2025
 ##################################################
 
-Creer.table.taxo <- function(){
+Creer.table.taxo <-
   "CREATE TABLE taxonomie (
       observed_scientific_name  VARCHAR(100),
       valid_scientific_name     VARCHAR(100),
@@ -20,6 +20,5 @@ Creer.table.taxo <- function(){
       species                   VARCHAR(100),
       PRIMARY KEY (observed_scientific_name)
   )"
-dbSendQuery(abondances_bd,Creer_taxo)
-}
+
 
