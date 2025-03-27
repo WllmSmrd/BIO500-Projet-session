@@ -21,3 +21,4 @@ assigner.type.obs <- function(ancientype){
   return(nouveautype)
 }
 
+ 
