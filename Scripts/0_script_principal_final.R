@@ -50,9 +50,9 @@ Verifier.abondance.negative(ab.annee.x.y) #La fonction nous retourne qu'il n'y a
                                           #donc pas besoin de créer une fonction pour 
                                           #gérer les abondances négatives
 
-# 8/ Évaluer la présence de caractères spéciaux problématiques
-source("./Scripts/8_detecter_special_char.R")
-Detecter.special.char(ab.annee.x.y)
+# 8/ Évaluer la présence de caractères spéciaux problématiques pour les observations
+source("./Scripts/8_detecter_special_char_obs.R")
+Detecter.special.char.obs(ab.annee.x.y)
 # Pour ^ : On observe "^" dans $unit qui correspond à un exposant donc ok.
 # Pour @ : On observe "@" dans $title puisque des adresses courriels sont inclus dans cette colonne donc ok.
 # Pour - : On observe "-" dans $unit, $values, $title et $coordo_y. Ça représente un exposant négatif dans values et unit, les coordonnées en y sont toutes négatives, et c'est possible de retrouver ce symbole dans un contexte textuel dans le titre. Donc, tout est ok.
@@ -66,15 +66,24 @@ ajout.notes <- creer.col.notes(ab.annee.x.y)
 source("./Scripts/10_corriger_unit.R")
 obs.clean <- corriger.unit(ajout.notes)
 
+# 11/ Évaluer la présence de caractères spéciaux problématiques pour les observations
+source("./Scripts/11_detecter_special_char_taxo.R")
+Detecter.special.char.taxo(taxo)
+#Pour - : on observe "-" dans $vernacular_fr et c'est normal puisque le nom français des espèces peut contenir ce symbole. Donc c'est ok
+
+# 12/ Insérer des NA dans les cases vides de l'objet taxo (qui est maintenant prêt à être injecté)
+source("./Scripts/11_inserer_NA.R")
+table_taxo <- insert.na(taxo)
+
 
 
 ### CREATION DATAFRAME ####################
 
-# Création dataframe pour references
+# Création dataframe pour references (maintenant prêt à injection)
 source("./Scripts/Creation_dataframe_ref.R")
 table_ref <- creer.ref(obs.clean)
 
-# Création dataframe observations
+# Création dataframe observations (maintenant prêt à injection)
 source("./Scripts/Creation_dataframe_obs.R")
 table_obs <- creer.obs(obs.clean)
 
