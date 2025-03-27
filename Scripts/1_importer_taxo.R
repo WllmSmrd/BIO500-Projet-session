@@ -7,6 +7,6 @@
 
 
 import.taxo <- function(){
-  taxo <- read.csv("taxonomie.csv")
+  taxo <- read.csv("./data/taxonomie.csv")
   return(taxo)
 }
