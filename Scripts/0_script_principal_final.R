@@ -66,7 +66,9 @@ ajout.notes <- creer.col.notes(ab.annee.x.y)
 source("./Scripts/10_corriger_unit.R")
 obs.clean <- corriger.unit(ajout.notes)
 
-
+# 11/ Insérer des NA dans les cases vides de l'objet taxo
+source("./Scripts/11_inserer_NA.R")
+taxo.na <- insert.na(taxo)
 
 ### CREATION DATAFRAME ####################
 
