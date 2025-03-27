@@ -13,5 +13,3 @@ assigner.type.taxo <- function(ancientype){
   return(nouveautype)
 }
 
-
-
