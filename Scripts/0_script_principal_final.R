@@ -71,7 +71,7 @@ source("./Scripts/11_detecter_special_char_taxo.R")
 Detecter.special.char.taxo(taxo)
 #Pour - : on observe "-" dans $vernacular_fr et c'est normal puisque le nom français des espèces peut contenir ce symbole. Donc c'est ok
 
-# 12/ Insérer des NA dans les cases vides de l'objet taxo (qui est )
+# 12/ Insérer des NA dans les cases vides de l'objet taxo (qui est maintenant prêt à être injecté)
 source("./Scripts/11_inserer_NA.R")
 table_taxo <- insert.na(taxo)
 
@@ -79,11 +79,11 @@ table_taxo <- insert.na(taxo)
 
 ### CREATION DATAFRAME ####################
 
-# Création dataframe pour references
+# Création dataframe pour references (maintenant prêt à injection)
 source("./Scripts/Creation_dataframe_ref.R")
 table_ref <- creer.ref(obs.clean)
 
-# Création dataframe observations
+# Création dataframe observations (maintenant prêt à injection)
 source("./Scripts/Creation_dataframe_obs.R")
 table_obs <- creer.obs(obs.clean)
 
