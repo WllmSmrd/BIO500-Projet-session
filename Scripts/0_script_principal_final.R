@@ -98,6 +98,7 @@ table_obs <- creer.obs(obs.clean)
 
 
 ### CREATION BASE DE DONNEES SQL #############
+library("RSQLite")
 abondances_bd <- dbConnect(RSQLite::SQLite(), dbname=("./database_series_temporelles.db"))
 
 #Création de la table de taxonomie dans la base de données SQL
