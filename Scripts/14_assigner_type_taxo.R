@@ -8,7 +8,7 @@
 
 
 assigner.type.taxo <- function(ancientype){
-  nouveautype <- acientype %>%
+  nouveautype <- ancientype %>%
     mutate(across(everything(), as.character))
   return(nouveautype)
 }
