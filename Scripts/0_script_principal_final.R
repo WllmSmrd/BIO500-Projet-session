@@ -69,10 +69,11 @@ obs.clean <- corriger.unit(ajout.notes)
 # 11/ Évaluer la présence de caractères spéciaux problématiques pour les observations
 source("./Scripts/11_detecter_special_char_taxo.R")
 Detecter.special.char.taxo(taxo)
+#Pour - : on observe "-" dans $vernacular_fr et c'est normal puisque le nom français des espèces peut contenir ce symbole. Donc c'est ok
 
-# 12/ Insérer des NA dans les cases vides de l'objet taxo
+# 12/ Insérer des NA dans les cases vides de l'objet taxo (qui est )
 source("./Scripts/11_inserer_NA.R")
-taxo.na <- insert.na(taxo)
+table_taxo <- insert.na(taxo)
 
 
 
