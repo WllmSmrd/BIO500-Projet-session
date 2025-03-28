@@ -119,7 +119,6 @@ dbWriteTable(abondances_bd, append = TRUE, name = "taxonomie", value = table_tax
 dbWriteTable(abondances_bd, append = TRUE, name = "references", value = table_ref, row.names = FALSE)
 dbWriteTable(abondances_bd, append = TRUE, name = "observations", value = table_obs, row.names = FALSE)
 
-
 # Lister les tables pour vérifier qu'elles sont bien dans la BD
 dbListTables(abondances_bd)
 
