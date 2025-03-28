@@ -113,3 +113,13 @@ dbSendQuery(abondances_bd,Creer.table.ref)
 #Création de la table d'observations dans la base de données SQL
 source("./Scripts/19_table_obs_sql.R")
 dbSendQuery(abondances_bd,Creer.table.obs)
+
+#Injecter données dans base de données SQL
+dbWriteTable(abondances_bd, append = TRUE, name = "taxonomie", value = table_taxo, row.names = FALSE)
+dbWriteTable(abondances_bd, append = TRUE, name = "references", value = table_ref, row.names = FALSE)
+dbWriteTable(abondances_bd, append = TRUE, name = "observations", value = table_obs, row.names = FALSE)
+
+
+# Lister les tables pour vérifier qu'elles sont bien dans la BD
+dbListTables(abondances_bd)
+

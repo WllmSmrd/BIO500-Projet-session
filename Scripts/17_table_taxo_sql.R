@@ -19,6 +19,6 @@ Creer.table.taxo <-
       genus                     VARCHAR(50),
       species                   VARCHAR(100),
       PRIMARY KEY (observed_scientific_name)
-  )"
+  );"
 
 

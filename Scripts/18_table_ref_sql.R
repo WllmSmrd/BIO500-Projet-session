@@ -15,7 +15,7 @@ Creer.table.ref <-
       intellectual_rights   BOLEAN,
       license               VARCHAR(100),
       owner                 VARCHAR(30)
-  )"
+  );"
 
 
 
