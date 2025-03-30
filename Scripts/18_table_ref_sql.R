@@ -7,14 +7,14 @@
 
 Creer.table.ref <-
   "CREATE TABLE 'references' (
-      id                    INTEGER PRIMARY KEY AUTOINCREMENT,
       original_source       VARCHAR(100),
       creator               VARCHAR(100),
-      title                 VARCHAR(500),
+      title                 VARCHAR(1000),
       publisher             VARCHAR(30),
       intellectual_rights   BOLEAN,
       license               VARCHAR(100),
-      owner                 VARCHAR(30)
+      owner                 VARCHAR(30),
+      PRIMARY KEY (title)
   );"
 
 

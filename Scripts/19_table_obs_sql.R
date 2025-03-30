@@ -7,7 +7,6 @@
 
 Creer.table.obs <-
   "CREATE TABLE observations (
-      id_obs                    INTEGER PRIMARY KEY AUTOINCREMENT,
       observed_scientific_name  VARCHAR(100),
       years                     INTEGER,
       unit                      VARCHAR(100),
@@ -15,9 +14,9 @@ Creer.table.obs <-
       coordo_x                  REAL,
       coordo_y                  REAL,
       notes                     VARCHAR(100),
-      source                    VARCHAR(100),
+      title                     VARCHAR(1000),
       FOREIGN KEY (observed_scientific_name) REFERENCES taxonomie(observed_scientific_name),
-      FOREIGN KEY (source) REFERENCES 'references'(id)
+      FOREIGN KEY (title) REFERENCES 'references'(title)
   );"
 
 

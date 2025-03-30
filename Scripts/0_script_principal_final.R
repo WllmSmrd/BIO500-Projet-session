@@ -88,11 +88,11 @@ table_taxo <- assigner.type.taxo(taxo.NA)
 
 ### CREATION DATAFRAME ####################
 
-# Création dataframe pour references (maintenant prêt à injection)
+# 15/ Création dataframe pour references (maintenant prêt à injection)
 source("./Scripts/15_creation_dataframe_ref.R")
 table_ref <- creer.ref(obs.clean)
 
-# Création dataframe observations (maintenant prêt à injection)
+# 16/ Création dataframe observations (maintenant prêt à injection)
 source("./Scripts/16_creation_dataframe_obs.R")
 table_obs <- creer.obs(obs.clean)
 
@@ -102,15 +102,15 @@ table_obs <- creer.obs(obs.clean)
 library("RSQLite")
 abondances_bd <- dbConnect(RSQLite::SQLite(), dbname=("./database_series_temporelles.db"))
 
-#Création de la table de taxonomie dans la base de données SQL
+# 17/ Création de la table de taxonomie dans la base de données SQL
 source("./Scripts/17_table_taxo_sql.R")
 dbSendQuery(abondances_bd,Creer.table.taxo)
 
-#Création de la table references dans la base de données SQL
+# 18/ Création de la table references dans la base de données SQL
 source("./Scripts/18_table_ref_sql.R")
 dbSendQuery(abondances_bd,Creer.table.ref)
 
-#Création de la table d'observations dans la base de données SQL
+# 19/ Création de la table d'observations dans la base de données SQL
 source("./Scripts/19_table_obs_sql.R")
 dbSendQuery(abondances_bd,Creer.table.obs)
 
