@@ -122,3 +122,5 @@ dbWriteTable(abondances_bd, append = TRUE, name = "observations", value = table_
 # Lister les tables pour vérifier qu'elles sont bien dans la BD
 dbListTables(abondances_bd)
 
+#Se déconnecter de la base de données
+dbDisconnect(abondances_bd)
