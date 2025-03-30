@@ -88,11 +88,11 @@ table_taxo <- assigner.type.taxo(taxo.NA)
 
 ### CREATION DATAFRAME #########################################################
 
-# Création dataframe pour references (maintenant prêt à injection)
+# 15/ Création dataframe pour references (maintenant prêt à injection)
 source("./Scripts/15_creation_dataframe_ref.R")
 table_ref <- creer.ref(obs.clean)
 
-# Création dataframe observations (maintenant prêt à injection)
+# 16/ Création dataframe observations (maintenant prêt à injection)
 source("./Scripts/16_creation_dataframe_obs.R")
 table_obs <- creer.obs(obs.clean)
 
