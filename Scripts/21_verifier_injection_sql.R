@@ -8,11 +8,16 @@
 
 
 verifier.injection.sql <- function(database){
-  dbListTables(database) #lister les tables pour vérifier qu'elles sont bien dans la base de données (BD)
-  dbGetQuery(database, 'SELECT * FROM observations LIMIT 4') #requête pour la table observations
-  dbGetQuery(database, 'SELECT * FROM taxonomie LIMIT 4')    #requête pour la table taxonomie
-  dbGetQuery(database, 'SELECT * FROM "references" LIMIT 4') #requête pour la table references (entre guillements pour différencier de la bd déjà existante)
+  tables <- dbListTables(database) #lister les tables pour vérifier qu'elles sont bien dans la base de données (BD)
+  observations <- dbGetQuery(database, 'SELECT * FROM observations LIMIT 4') #requête pour la table observations
+  taxonomie <- dbGetQuery(database, 'SELECT * FROM taxonomie LIMIT 4')       #requête pour la table taxonomie
+  references <- dbGetQuery(database, 'SELECT * FROM "references" LIMIT 4')   #requête pour la table references (entre guillements pour différencier de la bd déjà existante)
+
+  return(list(
+    tables = tables,
+    observations = observations,
+    taxonomie = taxonomie,
+    references = references
+  ))
 }
-
-
 
