@@ -114,13 +114,13 @@ dbSendQuery(abondances_bd,Creer.table.ref)
 source("./Scripts/19_table_obs_sql.R")
 dbSendQuery(abondances_bd,Creer.table.obs)
 
-#Injecter données dans base de données SQL
-dbWriteTable(abondances_bd, append = TRUE, name = "taxonomie", value = table_taxo, row.names = FALSE)
-dbWriteTable(abondances_bd, append = TRUE, name = "references", value = table_ref, row.names = FALSE)
-dbWriteTable(abondances_bd, append = TRUE, name = "observations", value = table_obs, row.names = FALSE)
+# 20/ Injecter données dans base de données SQL
+source("./Scripts/20_injecter.R")
+injection(abondances_bd)
 
-# Lister les tables pour vérifier qu'elles sont bien dans la BD
-dbListTables(abondances_bd)
+# 21/ Lister les tables pour vérifier qu'elles sont bien dans la BD
+source("./Scripts/21_verifier_injection_sql.R")
+verifier.injection.sql(abondances_bd)
 
-#Se déconnecter de la base de données
+# Se déconnecter de la base de données
 dbDisconnect(abondances_bd)
