@@ -8,6 +8,6 @@
 
 creer.obs <- function(data){
   dataframe3 <- data[,c("observed_scientific_name", "years", "unit", "values", 
-                        "coordo_x", "coordo_y", "notes")]
+                        "coordo_x", "coordo_y", "notes", "title")]
   return(dataframe3)
 }

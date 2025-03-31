@@ -9,5 +9,6 @@
 creer.ref <- function(data){
   dataframe2<- data[,c("original_source", "creator", "title", "publisher", 
                        "intellectual_rights", "license", "owner")]
-  return(dataframe2)
+  dataframe2.1 <- unique(dataframe2)
+  return(dataframe2.1)
 }
