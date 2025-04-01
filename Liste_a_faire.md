@@ -8,4 +8,4 @@
 
 - Diviser le dataframe en plusieurs tables (injecter nos données dans les tables SQL) (FAIT)
 - Mettre à jour le README.md
-- 
+- Ammorcer le fichier targets
