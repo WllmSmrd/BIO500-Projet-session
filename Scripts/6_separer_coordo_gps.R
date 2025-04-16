@@ -8,7 +8,6 @@
 
 # Le code suivant permet de séparer les coordonnées GPS en une colonne x et une colonne y.
 
-library(stringr)
 
 Separer.coordo.gps <- function(doublons_supp){
   coordo_x_y <- doublons_supp %>%

@@ -9,8 +9,6 @@
 # Le code suivant permet de créer un tableau où chaque ligne correspond a une abondance 
 # d'une espece pour une annee a un endroit precis.
 
-library(tidyverse)
-
 Separer.annee.abondance <- function(colcorr){
   csv_clean <- colcorr %>%
     mutate(

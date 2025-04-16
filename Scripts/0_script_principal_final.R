@@ -6,11 +6,11 @@
 ##################################################
 
 
-### INSTALLER PACKAGES #########################################################
-install.packages("dplyr")
-install.packages("tidyverse")
-install.packages("stringr")
-install.packages("RSQLite")
+### ACTIVER LIBRAIRIES #########################################################
+library(dplyr)
+library(tidyverse)
+library(stringr)
+library(RSQLite)
 
 
 

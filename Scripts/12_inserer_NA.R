@@ -4,7 +4,6 @@
 # Auteur: William Simard, Zoé Chol, Kyara Boisvert 
 # Date: 21-03-2025
 ##################################################
-library(dplyr)
 
 insert.na <- function(data){
   data <- data %>%
