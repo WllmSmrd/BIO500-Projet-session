@@ -122,5 +122,17 @@ injection(abondances_bd)
 source("./Scripts/21_verifier_injection_sql.R")
 verifier.injection.sql(abondances_bd)
 
+
+### REQUETES POUR EXTRACTION DE DONNEES ###################################
+
+# 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
+source("./Scripts/22_selection_donnees_biodiv.R")
+biodiv_years <- dbGetQuery(abondances_bd, requete.biodiv)
+
+# 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
+source("./Scripts/23_selection_donnees_taxons.R")
+obs_years_taxon <- dbGetQuery(abondances_bd, requete.taxons)
+
+
 # Se déconnecter de la base de données
 dbDisconnect(abondances_bd)

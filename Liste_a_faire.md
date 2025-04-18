@@ -13,8 +13,8 @@
       (Will) Je propose
                     1. Observe-t-on un déclin de la biodiversité à travers les années?
                        (on produirait une figure présentant le nombre d'espèces observées à chaque année)
-                    2. Quel taxon est a-t-on le plus (ou le moins) observé à travers les années?
-                       (on produirait une figure présentant le nombre d'observations par taxons (classe? ordre?))
+                    2. Quel taxon a-t-on le plus (ou le moins) observé à travers les années?
+                       (on produirait une figure présentant le nombre total d'observations par taxon (classe? ordre?))
                     3. Quel taxon a le plus décliné à travers les années?
                        (on produirait une figure illustrant le nombre d'observations à chaque année pour pour chaque taxon (classe?). Une courbe par taxon dans le même graphique)
 - Produire 3 figures pour l'analyse (?)
