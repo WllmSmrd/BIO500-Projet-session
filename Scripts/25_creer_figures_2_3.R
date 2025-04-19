@@ -36,7 +36,7 @@ creer.figures.2.3 <- function(data){
   dev.off()
   
   
-  #Figure 3 (déclin des taxons dans un intervalle de temps à déterminer)
+  #Figure 3 (déclin des taxons depuis 1970)
   pdf("figure_3_declin_classe.pdf", width = 14, height = 6) #pour exportation de la figure en pdf
   par(mfrow = c(1,1), mar = c(10, 6, 4, 2), mgp = c(4, 1, 0))                  # aucun fractionnement de la fenêtre graphique
 
