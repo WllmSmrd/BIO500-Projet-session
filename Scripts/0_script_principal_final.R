@@ -80,7 +80,7 @@ taxo.NA <- insert.na(taxo)
 source("./Scripts/13_assigner_type_obs.R")
 obs.clean <- assigner.type.obs(obs.corrigee)
 
-# 14/ Assigner le bon type de données à chaque colonne du l'objet taxonomie (maintenant prêt à injection)     
+# 14/ Assigner le bon type de données à chaque colonne du dataframe taxonomie (maintenant prêt à injection)     
 source("./Scripts/14_assigner_type_taxo.R")
 table_taxo <- assigner.type.taxo(taxo.NA)
 
