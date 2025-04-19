@@ -11,6 +11,7 @@ sur la structure des communautés ?
 
 L'analyse d'un inventaire écologique nous permettra de répondre à cette question.
 
+
 #Données
 
 Notre inventaire écologique est constitué de séries temporelles issues de mesures 
@@ -22,7 +23,9 @@ Résolution spatiale et temporelle :
 - Entre 2 et ~40 mesures répétées
 - Données : espèces, année, coordonnées spatiales, taille de population
 
+
 #Méthodes
+
 
 #Résultats 
 
