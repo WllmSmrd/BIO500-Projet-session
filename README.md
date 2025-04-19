@@ -30,17 +30,61 @@ Résolution spatiale et temporelle :
 
 ### STRUCTURE DU REPERTOIRE ####################################################
 
-Le répertoire contient un fichier de données `Data` et fichiers de scripts `Scripts` :
+Le répertoire contient un dossier de données `Data` et un dossier de scripts `Scripts` :
 
-- `Data`comprend l'ensemble des données de séries temporelles utilisés pour l'analyse
+- `Data`comprend l'ensemble des données de séries temporelles et de taxonomie utilisées pour l'analyse
 - `Scripts` comprend l'ensemble des scripts créés pour l'analyse
 
-#Description des scripts
 
-Script principal qui regroupe et fait fonctionner toutes les fonctions adjacentes :
+#Description des données (dossier Data)
+## Fichiers de données
+
+- `*.csv` séries temporelles d'un ensemble de populations mesuré dans un même jeu de données. Chaque ligne correspond à une population distincte.
+- `taxonomie.csv` correspondance entre les noms scientifiques observés et la taxonomie validée, les noms communs et la taxonomie complète des espèces. Le lien entre les données de population et la taxonomie se fait à l'aide de la colonne `observed_scientific_name`.
+
+### Séries temporelles de populations (*.csv)
+
+Ce jeu de données contient des inventaires de populations répétés dans le temps qui témoignent de l'évolution de la biodiversité dans le temps (<https://www.livingplanetindex.org/>). 
+Ces séries temporelles de taille de populations ont été collectées par Biodiversité Québec depuis plusieurs sources et ont déjà été standardisées pour faciliter leur utilisation. 
+La standardisation comprend la conversion des abondances en unités de densité pour un effort constant (ex. nombre d'individus par mètre carré).
+
+#### Description des variables
+
+- `observed_scientific_name` Nom scientifique de l'espèce observée
+- `years` Années de mesurage
+- `unit` Unité de mesure
+- `values` Abondance de la population observée
+- `geom` Coordonnées géographiques de l'observation
+- `original_source` Source originale des données
+- `creator` Auteur des données
+- `title` Titre du jeu de données dont les données sont extraites
+- `publisher` Éditeur des données
+- `intellectual_rights` Droits intellectuels
+- `license` Licence des données
+- `owner` Propriétaire des données
+
+### Taxonomie (taxonomie.csv)
+#### Description des variables
+
+- `observed_scientific_name` Nom scientifique de l'espèce observée
+- `valid_scientific_name` Nom scientifique de l'espèce observée tel qu'enregistré à l'IRIS
+- `rank` rang taxonomique de l'espèce observée (genre, espèce, sous-espèce, etc.)
+- `vernacular_fr` Nom vernaculaire de l'espèce en français
+- `kingdom` règne de l'espèce
+- `phylum` embranchement de l'espèce
+- `class` classe de l'espèce
+- `order` ordre de l'espèce
+- `family` famille de l'espèce
+- `genus` genre de l'espèce
+- `species` espèce
+
+
+#Description des scripts (dossier Scripts)
+
+Script principal qui regroupe et fait appel à tous les scripts nécessaires pour l'analyse :
 - `0_script_principal_final.R` 
    
-Les scripts suivant regroupent les fonctions utilisées importer les données :
+Les scripts suivant regroupent les fonctions utilisées pour importer les données :
 - `1_importer_taxo.R`
 - `2_combiner_donnees_brutes.R`
 
@@ -53,14 +97,66 @@ Les scripts suivant regroupent les fonctions utilisées pour valider et nettoyer
 - `8_detecter_special_char.R`
 - `9_creer_col_notes.R`
 - `10_corriger_unit.R`
+- `11_detecter_special_char_taxo.R` 
+- `12_inserer_NA.R`
+- `13_assigner_type_obs.R`
+- `14_assigner_type_taxo.R`
 
-Les scripts suivant regroupent les fonctions utilisées pour créer des dataframes :
-- `Creation_dataframe_obs.R`
-- `Creation_dataframe_ref.R`
-- `Creation_dataframe_taxo.R`
+Les scripts suivant regroupent les fonctions utilisées pour créer des dataframes prêts à être injectés dans la base de données SQL à des fins d'archivage:
+- `14_assigner_type_taxo.R`
+- `15_creation_dataframe_ref.R`
+- `16_creation_dataframe_obs.R`
 
+Les scripts suivant regroupent les fonctions utilisées pour créer les tables dans la base de données SQL à des fins d'archivage:
+- `17_table_taxo_sql.R`
+          *Cette table regroupe toutes les informations relatives à la taxonomie des espèces observées
+          - `observed_scientific_name` Nom scientifique de l'espèce observée (qui sert de clé primaire)
+          - `valid_scientific_name` Nom scientifique de l'espèce observée tel qu'enregistré à l'IRIS
+          - `rank` rang taxonomique de l'espèce observée (genre, espèce, sous-espèce, etc.)
+          - `vernacular_fr` Nom vernaculaire de l'espèce en français
+          - `kingdom` règne de l'espèce
+          - `phylum` embranchement de l'espèce
+          - `class` classe de l'espèce
+          - `order` ordre de l'espèce
+          - `family` famille de l'espèce
+          - `genus` genre de l'espèce
+          - `species` espèce
+          
+- `17_table_ref_sql.R`
+          *Cette table regroupe les informations relatives aux sources desquelles proviennent les données des séries temporelles
+              - `original_source` Source originale des données
+              - `creator` Auteur des données
+              - `title` Titre du jeu de données dont les données sont extraites (qui sert de clé primaire)
+              - `publisher` Éditeur des données
+              - `intellectual_rights` Droits intellectuels
+              - `license` Licence des données
+              - `owner` Propriétaire des données
+              
+- `17_table_obs_sql.R`
+          *Cette table regroupe les informations relatives aux observations des populations des séries temporelles
+              - `observed_scientific_name` Nom scientifique de l'espèce observée (qui sert de clé secondaires pour relier les tables observations et taxonomie)
+              - `years` Années de mesurage
+              - `unit` Unité de mesure
+              - `values` Abondance de la population observée
+              - `coordo_x` Coordonnée géographique en x de l'observation
+              - `coordo_y` Coordonnée géographique en y de l'observation
+              - `notes` Commentaires liés à l'observation
+              - `title` Titre du jeu de données dont les données sont extraites (qui sert de clé secondaire pour relier les tables observations et references)
 
+Les scripts suivant regroupent les fonctions utilisées pour injecter les données dans les tables SQL à des fins d'archivage:
+- `20_injecter.R`  
+- `21_verifier_injection.R`
 
+Les scripts suivant regroupent les fonctions utilisées pour extraire des tables SQL les données utilisées pour l'analyse:
+- `22_selection_donnees_biodiv.R`
+- `23_selection_donnees_taxons.R`
+
+Les scripts suivant regroupent les fonctions utilisées pour produire les figures illustrant l'analyse:
+- `24_creer_figure_1.R`
+- `25_creer_figures_2_3.R`
+   
+   
+              
 ### INSTRUCTIONS ###############################################################
 
 
