@@ -7,7 +7,7 @@
 
 
 - Diviser le dataframe en plusieurs tables (injecter nos données dans les tables SQL) (FAIT)
-- Mettre à jour le README.md
+- Mettre à jour le README.md (il est à jour, mais doit être complété)
 - Ammorcer le fichier targets
 - Identifier les questions de recherche (FAIT)
       (Will) Je propose
