@@ -65,7 +65,7 @@ ajout.notes <- creer.col.notes(ab.annee.x.y)
 
 # 10/ Corriger les "?" dans la colonne $unit et inscrire l'information d'incertitude dans la colonne notes
 source("./Scripts/10_corriger_unit.R")
-obs.corrigee <- corriger.unit(ajout.notes)
+obs.corrigee.unit <- corriger.unit(ajout.notes)
 
 # 11/ Évaluer la présence de caractères spéciaux problématiques pour les observations
 source("./Scripts/11_detecter_special_char_taxo.R")
@@ -78,7 +78,7 @@ taxo.NA <- insert.na(taxo)
 
 # 13/ Assigner le bon type de données à chaque colonne de l'objet observations       
 source("./Scripts/13_assigner_type_obs.R")
-obs.clean <- assigner.type.obs(obs.corrigee)
+obs.clean <- assigner.type.obs(obs.corrigee.unit)
 
 # 14/ Assigner le bon type de données à chaque colonne du dataframe taxonomie (maintenant prêt à injection)     
 source("./Scripts/14_assigner_type_taxo.R")
