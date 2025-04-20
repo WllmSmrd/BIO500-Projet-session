@@ -136,7 +136,7 @@ obs_years_taxon <- dbGetQuery(abondances_bd, requete.taxons)
 
 ### ANALYSES ################################
 
-#24/ Figure pour l'analyse de la question 1 (biodiversité à travaers les années)
+#24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
 source("./Scripts/24_creer_figure_1.R")
 creer.figure.1(biodiv_years)
 

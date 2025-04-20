@@ -9,7 +9,7 @@ creer.figures.2.3 <- function(data){
   
   #Figure 2 (Nombre d'observations total par classe)
   pdf("figure_2_obs_par_classe.pdf", width = 14, height = 6) #pour exportation de la figure en pdf
-  par(mfrow = c(1,1), mar = c(10, 8, 4, 2), mgp = c(5, 1, 0))                  # aucun fractionnement de la fenêtre graphique
+  par(mfrow = c(1,1), mar = c(10, 8, 4, 2), mgp = c(5, 1, 0))  # aucun fractionnement de la fenêtre graphique
   
   total_par_classe <- data %>%         # Calcul du total d'observations par classe
     group_by(class) %>%
