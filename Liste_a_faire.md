@@ -22,7 +22,7 @@
         - Bibliographie
         - 1500 mots MAX pour l'entièreté du rapport
         
-- Identifier les questions de recherche (FAIT)
+- (FAIT) Identifier les questions de recherche
                     1. Observe-t-on un déclin de la biodiversité à travers les années?
                     2. Quel taxon a-t-on le plus (ou le moins) observé à travers les années?
                     3. Quel taxon a le plus décliné depuis 1970?
