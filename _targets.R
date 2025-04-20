@@ -189,20 +189,27 @@ list(
 
 ### REQUETES POUR EXTRACTION DE DONNEES ########################################
 
+  #Creation des objets de requete
+  tar_target(requete_taxons,
+    selection_taxons
+  ),
+
+  tar_target(requete_biodiv,
+    selection_biodiv
+  ),
+
   # 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
   tar_target(biodiv_years, {
     con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
     on.exit(dbDisconnect(con))
-    biodiv_years <- dbGetQuery(con, requete.biodiv)
-    biodiv_years
+    dbGetQuery(con, requete_biodiv)
   }),
 
   # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(obs_years_taxon, {
     con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
     on.exit(dbDisconnect(con))
-    obs_years_taxon <- dbGetQuery(con, requete.taxons)
-    obs_years_taxon
+    dbGetQuery(con, requete_taxons)
   }),
 
 
@@ -216,7 +223,7 @@ list(
 
   # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(figures_2_3, 
-    creer.figures.2.3(obs_years_taxon)
+    creer.figures.2.3(obs_years_taxon),
   )
 
 )
