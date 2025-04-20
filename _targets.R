@@ -76,7 +76,7 @@ list(
 ### VALIDATION ET NETTOYAGE DES DONNEES ########################################
 
 #ETAPE 1: Données d'observations 
-  tar_target(obs_clean, {
+  tar_target(obs.clean, {
   
     # 3/ Corriger les colonnes qui se sont dédoublées à cause de fautes d'orthographe/non conformité des noms de colonnes
     donnees.col.corr = corriger.col(donnees) 
