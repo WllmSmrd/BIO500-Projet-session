@@ -194,6 +194,7 @@ list(
     con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
     on.exit(dbDisconnect(con))
     biodiv_years <- dbGetQuery(con, requete.biodiv)
+    biodiv_years
   }),
 
   # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
@@ -201,6 +202,7 @@ list(
     con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
     on.exit(dbDisconnect(con))
     obs_years_taxon <- dbGetQuery(con, requete.taxons)
+    obs_years_taxon
   }),
 
 
