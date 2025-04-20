@@ -186,12 +186,6 @@ list(
   }),
 
 
-#ETAPE 4: Déconnection du serveur 
-  tar_target(deconnection_abondances_bd, 
-    dbDisconnect(connection_abondances_bd)
-  ),
-
-
 
 ### REQUETES POUR EXTRACTION DE DONNEES ########################################
 
@@ -205,6 +199,10 @@ list(
     dbGetQuery(connection_abondances_bd, requete.taxons)
   ),
 
+  # Déconnection du serveur 
+  tar_target(deconnection_abondances_bd, 
+           dbDisconnect(connection_abondances_bd)
+  ),
 
 
 ### ANALYSES ET VISUALISATION ##################################################
