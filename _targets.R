@@ -160,7 +160,6 @@ list(
   tar_target(creer_tables_sql, {
 
     connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
-    on.exit(dbDisconnect(connection_abondances_bd))
     
     # 17/ Création de la table de taxonomie dans la base de données SQL
     dbSendQuery(connection_abondances_bd,Creer.table.taxo)
@@ -170,7 +169,8 @@ list(
     
     # 19/ Création de la table d'observations dans la base de données SQL
     dbSendQuery(connection_abondances_bd,Creer.table.obs)
-  
+    
+    on.exit(dbDisconnect(connection_abondances_bd))
   }),
 
 

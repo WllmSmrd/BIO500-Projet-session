@@ -6,7 +6,7 @@
 ##################################################
 
 Creer.table.taxo <-
-  "CREATE TABLE taxonomie (
+  "CREATE TABLE IF NOT EXISTS taxonomie (
       observed_scientific_name  VARCHAR(100),
       valid_scientific_name     VARCHAR(100),
       rank                      VARCHAR(10),

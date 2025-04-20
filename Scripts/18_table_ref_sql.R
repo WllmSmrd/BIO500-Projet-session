@@ -6,7 +6,7 @@
 ##################################################
 
 Creer.table.ref <-
-  "CREATE TABLE 'references' (
+  "CREATE TABLE IF NOT EXISTS 'references' (
       original_source       VARCHAR(100),
       creator               VARCHAR(100),
       title                 VARCHAR(1000),

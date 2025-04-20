@@ -6,7 +6,7 @@
 ##################################################
 
 Creer.table.obs <-
-  "CREATE TABLE observations (
+  "CREATE TABLE IF NOT EXISTS observations (
       observed_scientific_name  VARCHAR(100),
       years                     INTEGER,
       unit                      VARCHAR(100),
