@@ -138,8 +138,8 @@ Les scripts suivant regroupent les fonctions utilisées pour créer les tables d
 - `17_table_obs_sql.R`
           *Cette table regroupe les informations relatives aux observations des populations des séries temporelles
               - `observed_scientific_name` Nom scientifique de l'espèce observée (qui sert de clé secondaires pour relier les tables observations et taxonomie)
-              - `years` Années de mesurage
-              - `unit` Unité de mesure
+              - `years` Années de prise de données
+              - `unit` Unité de mesure de l'abondance
               - `values` Abondance de la population observée
               - `coordo_x` Coordonnée géographique en x de l'observation
               - `coordo_y` Coordonnée géographique en y de l'observation
