@@ -7,6 +7,7 @@ library(dplyr)
 library(tidyverse)
 library(stringr)
 library(RSQLite)
+
 tar_option_set(packages = c("dplyr", "tidyverse", "stringr", "RSQLite"))
 
 # Scripts R
@@ -36,10 +37,9 @@ source("./Scripts/23_selection_donnees_taxons.R")
 source("./Scripts/24_creer_figure_1.R")
 source("./Scripts/25_creer_figures_2_3.R")
 
+
 # Pipeline
 list(
-  # Une target pour le chemin du fichier de donnée permet de suivre les 
-  # changements dans le fichier
   tar_target(
     name = path, # Cible
     command = "data/data.txt", # Emplacement du fichier
@@ -48,16 +48,34 @@ list(
   # La target suivante a "path" pour dépendance et importe les données. Sans
   # la séparation de ces deux étapes, la dépendance serait brisée et une
   # modification des données n'entrainerait pas l'exécution du pipeline
+  
+  #Importation des données
+  #données observations
+  
+  #données taxonomie
   tar_target(
     name = data, # Cible pour l'objet de données
     command = read.table(path) # Lecture des données
-  ),   
+  ),
+  
+  #Nettoyage et validation
+  #données observations
+  
+  #données taxonomie
   tar_target(
     resultat_modele, # Cible pour le modèle 
     mon_modele(data) # Exécution de l'analyse
   ),
+  
+  #Préparation des données pour injection pour injection
+  
+  #Création de la base de données et injection
   tar_target(
     figure, # Cible pour l'exécution de la figure
     ma_figure(data, resultat_modele) # Réalisation de la figure
   )
+  
+  #Extraction des données pour l'analyse
+  
+  #Analyse et visualisation
 )
