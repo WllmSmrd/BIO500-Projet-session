@@ -3,6 +3,7 @@
 # ===========================================
 # Dépendances
 library(targets)
+library(tarchetypes)
 library(dplyr)
 library(tidyverse)
 library(stringr)
