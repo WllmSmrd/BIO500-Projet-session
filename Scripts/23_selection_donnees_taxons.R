@@ -6,7 +6,7 @@
 # Date: 16-04-2025
 ##################################################
 
-requete_taxons <- 
+selection_taxons <- 
   "SELECT 
       class, 
       years, 
