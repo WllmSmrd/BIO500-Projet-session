@@ -1,6 +1,7 @@
 # ===========================================
 # _targets.R file
 # ===========================================
+
 # Dépendances
 library(targets)
 library(tarchetypes)
@@ -50,33 +51,162 @@ list(
   # la séparation de ces deux étapes, la dépendance serait brisée et une
   # modification des données n'entrainerait pas l'exécution du pipeline
   
-  #Importation des données
-  #données observations
   
-  #données taxonomie
-  tar_target(
-    name = data, # Cible pour l'objet de données
-    command = read.table(path) # Lecture des données
+  
+### IMPORTATION DES DONNEES ####################################################
+
+  #1/ Importer les données relatives à la taxonomie
+  tar_target(taxo, 
+    import.taxo()
+  ),
+
+  #2/ Importer et combiner tous les csv d'observations en un seul objet
+  tar_target(donnees_brutes, 
+    combiner.csv()
   ),
   
-  #Nettoyage et validation
-  #données observations
+
+
+### VALIDATION ET NETTOYAGE DES DONNEES ########################################
+
+#ETAPE 1: Données d'observations 
+  tar_target(obs_clean, {
   
-  #données taxonomie
-  tar_target(
-    resultat_modele, # Cible pour le modèle 
-    mon_modele(data) # Exécution de l'analyse
+    # 3/ Corriger les colonnes qui se sont dédoublées à cause de fautes d'orthographe/non conformité des noms de colonnes
+    donnees.col.corr = corriger.col(donnees) 
+  
+    # 4/ Séparer les annees et abondances pour avoir 1 ligne = 1 année, 1 abondance
+    ab.annee = Separer.annee.abondance(donnees.col.corr)
+  
+    # 5/ Effacer les observations doublons
+    ab.annee.simple = Supprimer.doublons(ab.annee) 
+  
+    # 6/ Séparer les coordonnees gps en colonnes x et y
+    ab.annee.x.y = Separer.coordo.gps(ab.annee.simple)
+  
+    # 7/ Vérifier les abondances négatives
+    Verifier.abondance.negative(ab.annee.x.y) #La fonction nous retourne qu'il n'y a 
+                                              #aucune valeur négative d'abondance, 
+                                              #donc pas besoin de créer une fonction pour 
+                                              #gérer les abondances négatives
+ 
+    # 8/ Évaluer la présence de caractères spéciaux problématiques pour les observations
+    Detecter.special.char.obs(ab.annee.x.y)) 
+    # Pour ^ : On observe "^" dans $unit qui correspond à un exposant donc ok.
+    # Pour @ : On observe "@" dans $title puisque des adresses courriels sont inclus dans cette colonne donc ok.
+    # Pour - : On observe "-" dans $unit, $values, $title et $coordo_y. Ça représente un exposant négatif dans values et unit, les coordonnées en y sont toutes négatives, et c'est possible de retrouver ce symbole dans un contexte textuel dans le titre. Donc, tout est ok.
+    # Pour ? : On observe "?" dans $unit et $title.Pour le titre, c'est ok puisqu'un titre d'article scientifique peut être une question. Pour $unit par contre, ça signifie qu'il y a de l'incertitude quant aux unités de mesure de l'abondance
+ 
+    # 9/ Creer une colonne notes pour gerer la presence de "?" dans $unit sans perdre l'information d'incertitude
+    ajout.notes = creer.col.notes(ab.annee.x.y)
+
+    # 10/ Corriger les "?" dans la colonne $unit et inscrire l'information d'incertitude dans la colonne notes
+    obs.corrigee.unit = corriger.unit(ajout.notes)
+  
+    # 13/ Assigner le bon type de données à chaque colonne de l'objet observations
+    obs.clean = assigner.type.obs(obs.corrigee.unit)
+  
+  }),
+
+
+#ETAPE 2: Données de taxonomie 
+  tar_target(table_taxo, {
+  
+    # 11/ Évaluer la présence de caractères spéciaux problématiques pour les observations
+    Detecter.special.char.taxo(taxo)
+    #Pour - : on observe "-" dans $vernacular_fr et c'est normal puisque le nom français des espèces peut contenir ce symbole. Donc c'est ok
+
+    # 12/ Insérer des NA dans les cases vides de l'objet taxo 
+    taxo.NA = insert.na(taxo)
+
+    # 14/ Assigner le bon type de données à chaque colonne du dataframe taxonomie (maintenant prêt à injection)     
+    table_taxo = assigner.type.taxo(taxo.NA)
+
+  }),
+
+
+
+### CREATION DATAFRAME #########################################################
+
+  # 15/ Création dataframe pour references (maintenant prêt à injection)
+  tar_target(table_ref, 
+    creer.ref(obs.clean)
   ),
+
+  # 16/ Création dataframe observations (maintenant prêt à injection)
+  tar_target(table_obs, 
+    creer.obs(obs.clean)
+  ),
+
+
+
+### CREATION BASE DE DONNEES SQL ###############################################
+
+#ETAPE 1: Connection au serveur
+  tar_target(connection_abondances_bd, 
+    dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+  ),
+
+
+#ETAPE 2: Création des tables dans la base de données SQL
+  tar_target(creer_tables_sql, {
+
+    # 17/ Création de la table de taxonomie dans la base de données SQL
+    dbSendQuery(abondances_bd,Creer.table.taxo)
+    
+    # 18/ Création de la table references dans la base de données SQL
+    dbSendQuery(abondances_bd,Creer.table.ref)
+    
+    # 19/ Création de la table d'observations dans la base de données SQL
+    dbSendQuery(abondances_bd,Creer.table.obs)
   
-  #Préparation des données pour injection pour injection
+  }),
+
+
+    
+#ETAPE 3: Injection des données dans la base de données SQL et vérification 
+  tar_target(injection_sql, {
+    
+    # 20/ Injecter données dans base de données SQL
+    injection(abondances_bd)
+    
+    # 21/ Lister les tables pour vérifier qu'elles sont bien dans la BD
+    verifier.injection.sql(abondances_bd)
   
-  #Création de la base de données et injection
-  tar_target(
-    figure, # Cible pour l'exécution de la figure
-    ma_figure(data, resultat_modele) # Réalisation de la figure
+  }),
+
+
+#ETAPE 4: Déconnection du serveur 
+  tar_target(deconnection_abondances_bd 
+    dbDisconnect(abondances_bd)
+  ),
+
+
+
+### REQUETES POUR EXTRACTION DE DONNEES ########################################
+
+  # 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
+  tar_target(biodiv_years, 
+    dbGetQuery(abondances_bd, requete.biodiv)
+  ),
+
+  # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
+  tar_target(obs_years_taxon, 
+    dbGetQuery(abondances_bd, requete.taxons)
+  ),
+
+
+
+### ANALYSES ET VISUALISATION ##################################################
+
+  # 24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
+  tar_target(figure_1, 
+  creer.figure.1(biodiv_years)
+  ),
+
+  # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
+  tar_target(figures_2_3, 
+    creer.figures.2.3(obs_years_taxon)
   )
-  
-  #Extraction des données pour l'analyse
-  
-  #Analyse et visualisation
+
 )
