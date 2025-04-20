@@ -42,14 +42,20 @@ source("./Scripts/25_creer_figures_2_3.R")
 
 # Pipeline
 list(
+
+### ÉTABLIR LE CHEMIN D'ACCES VERS LES DONNEES ###########################
+  
   tar_target(
-    name = path, # Cible
-    command = "data/data.txt", # Emplacement du fichier
+    name = path_obs, # Cible
+    command = "./Data/series_temporelles", # Emplacement des fichiers
     format = "file"
   ), 
-  # La target suivante a "path" pour dépendance et importe les données. Sans
-  # la séparation de ces deux étapes, la dépendance serait brisée et une
-  # modification des données n'entrainerait pas l'exécution du pipeline
+  
+  tar_target(
+    name = path_taxo, # Cible
+    command = "./Data/taxonomie.csv", # Emplacement du fichier
+    format = "file"
+  ),
   
   
   
@@ -57,12 +63,12 @@ list(
 
   #1/ Importer les données relatives à la taxonomie
   tar_target(taxo, 
-    import.taxo()
+    import.taxo(path_taxo)
   ),
 
   #2/ Importer et combiner tous les csv d'observations en un seul objet
   tar_target(donnees_brutes, 
-    combiner.csv()
+    combiner.csv(path_obs)
   ),
   
 

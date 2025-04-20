@@ -18,11 +18,11 @@ library(RSQLite)
 
 # 1/ Importer les données relatives à la taxonomie
 source("./Scripts/1_importer_taxo.R")
-taxo <- import.taxo()
+taxo <- import.taxo("./Data/taxonomie.csv")
 
 # 2/ Importer et combiner tous les csv d'observations en un seul objet
 source("./Scripts/2_combiner_donnees_brutes.R")
-donnees <- combiner.csv()
+donnees <- combiner.csv("./Data/series_temporelles")
 
 
 

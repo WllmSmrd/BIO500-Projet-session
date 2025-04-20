@@ -6,7 +6,7 @@
 ##################################################
 
 
-import.taxo <- function(){
-  taxo <- read.csv("./Data/taxonomie.csv")
+import.taxo <- function(chemin){
+  taxo <- read.csv(chemin)
   return(taxo)
 }
