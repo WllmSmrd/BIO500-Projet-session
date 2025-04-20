@@ -160,13 +160,13 @@ list(
   tar_target(creer_tables_sql, {
 
     # 17/ Création de la table de taxonomie dans la base de données SQL
-    dbSendQuery(abondances_bd,Creer.table.taxo)
+    dbSendQuery(connection_abondances_bd,Creer.table.taxo)
     
     # 18/ Création de la table references dans la base de données SQL
-    dbSendQuery(abondances_bd,Creer.table.ref)
+    dbSendQuery(connection_abondances_bd,Creer.table.ref)
     
     # 19/ Création de la table d'observations dans la base de données SQL
-    dbSendQuery(abondances_bd,Creer.table.obs)
+    dbSendQuery(connection_abondances_bd,Creer.table.obs)
   
   }),
 
@@ -181,14 +181,14 @@ list(
     injection_taxo(table_taxo)
     
     # 21/ Lister les tables pour vérifier qu'elles sont bien dans la BD
-    verifier.injection.sql(abondances_bd)
+    verifier.injection.sql(connection_abondances_bd)
   
   }),
 
 
 #ETAPE 4: Déconnection du serveur 
   tar_target(deconnection_abondances_bd, 
-    dbDisconnect(abondances_bd)
+    dbDisconnect(connection_abondances_bd)
   ),
 
 
@@ -197,12 +197,12 @@ list(
 
   # 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
   tar_target(biodiv_years, 
-    dbGetQuery(abondances_bd, requete.biodiv)
+    dbGetQuery(connection_abondances_bd, requete.biodiv)
   ),
 
   # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(obs_years_taxon, 
-    dbGetQuery(abondances_bd, requete.taxons)
+    dbGetQuery(connection_abondances_bd, requete.taxons)
   ),
 
 
