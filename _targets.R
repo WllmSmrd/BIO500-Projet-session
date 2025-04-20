@@ -150,27 +150,21 @@ list(
 
 ### CREATION BASE DE DONNEES SQL ###############################################
 
-#ETAPE 1: Connexion au serveur
-  tar_target(connection_abondances_bd, 
-    dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
-  ),
-
-
-#ETAPE 2: Création des tables dans la base de données SQL
+#ETAPE 1: Création des tables dans la base de données SQL
   tar_target(creer_tables_sql, {
 
-    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(con))
     
     # 17/ Création de la table de taxonomie dans la base de données SQL
-    dbSendQuery(connection_abondances_bd,Creer.table.taxo)
+    dbSendQuery(con,Creer.table.taxo)
     
     # 18/ Création de la table references dans la base de données SQL
-    dbSendQuery(connection_abondances_bd,Creer.table.ref)
+    dbSendQuery(con,Creer.table.ref)
     
     # 19/ Création de la table d'observations dans la base de données SQL
-    dbSendQuery(connection_abondances_bd,Creer.table.obs)
+    dbSendQuery(con,Creer.table.obs)
     
-    on.exit(dbDisconnect(connection_abondances_bd))
   }),
 
 
@@ -178,8 +172,8 @@ list(
 #ETAPE 3: Injection des données dans la base de données SQL et vérification 
   tar_target(injection_sql, {
     
-    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
-    on.exit(dbDisconnect(connection_abondances_bd))
+    con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(con))
     
     # 20/ Injecter données dans base de données SQL
     injection_obs(table_obs)
@@ -187,7 +181,7 @@ list(
     injection_taxo(table_taxo)
     
     # 21/ Lister les tables pour vérifier qu'elles sont bien dans la BD
-    verifier.injection.sql(connection_abondances_bd)
+    verifier.injection.sql(con)
   
   }),
 
@@ -197,16 +191,16 @@ list(
 
   # 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
   tar_target(biodiv_years, {
-    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
-    on.exit(dbDisconnect(connection_abondances_bd))
-    dbGetQuery(connection_abondances_bd, requete.biodiv)
+    con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(con))
+    dbGetQuery(con, requete.biodiv)
   }),
 
   # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
-  tar_target(obs_years_taxon,{
-    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
-    on.exit(dbDisconnect(connection_abondances_bd))
-    dbGetQuery(connection_abondances_bd, requete.taxons)
+  tar_target(obs_years_taxon, {
+    con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(con))
+    dbGetQuery(con, requete.taxons)
   }),
 
 
@@ -221,11 +215,6 @@ list(
   # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(figures_2_3, 
     creer.figures.2.3(obs_years_taxon)
-  ),
-
-### DÉCONNEXION DU SERVEUR ####################################### 
-  tar_target(deconnection_abondances_bd, 
-    dbDisconnect(connection_abondances_bd)
   )
 
 )
