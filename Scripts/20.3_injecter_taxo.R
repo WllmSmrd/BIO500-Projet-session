@@ -6,5 +6,5 @@
 ##################################################
 
 injection_taxo <- function(table){
-  dbWriteTable(abondances_bd, append = TRUE, name = "taxonomie", value = table, row.names = FALSE) #permet d'injecter les données de taxonimie#
+  dbWriteTable(connection_abondances_bd, append = TRUE, name = "taxonomie", value = table, row.names = FALSE) #permet d'injecter les données de taxonimie#
 }

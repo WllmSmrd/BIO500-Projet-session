@@ -6,5 +6,5 @@
 ##################################################
 
 injection_obs <- function(table){
-dbWriteTable(abondances_bd, append = TRUE, name = "observations", value = table, row.names = FALSE) #permet d'injecter les données d'observations#
+dbWriteTable(connection_abondances_bd, append = TRUE, name = "observations", value = table, row.names = FALSE) #permet d'injecter les données d'observations#
 }

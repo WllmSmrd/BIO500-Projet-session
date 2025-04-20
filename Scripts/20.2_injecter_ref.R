@@ -6,5 +6,5 @@
 ##################################################
 
 injection_ref <- function(table){
-dbWriteTable(abondances_bd, append = TRUE, name = "references", value = table, row.names = FALSE) #permet d'injecter les données de references#
+dbWriteTable(connection_abondances_bd, append = TRUE, name = "references", value = table, row.names = FALSE) #permet d'injecter les données de references#
 }
