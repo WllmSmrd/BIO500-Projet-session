@@ -159,6 +159,9 @@ list(
 #ETAPE 2: Création des tables dans la base de données SQL
   tar_target(creer_tables_sql, {
 
+    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(connection_abondances_bd))
+    
     # 17/ Création de la table de taxonomie dans la base de données SQL
     dbSendQuery(connection_abondances_bd,Creer.table.taxo)
     
@@ -174,6 +177,9 @@ list(
     
 #ETAPE 3: Injection des données dans la base de données SQL et vérification 
   tar_target(injection_sql, {
+    
+    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(connection_abondances_bd))
     
     # 20/ Injecter données dans base de données SQL
     injection_obs(table_obs)
