@@ -150,7 +150,7 @@ list(
 
 ### CREATION BASE DE DONNEES SQL ###############################################
 
-#ETAPE 1: Connection au serveur
+#ETAPE 1: Connexion au serveur
   tar_target(connection_abondances_bd, 
     dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
   ),
@@ -190,14 +190,18 @@ list(
 ### REQUETES POUR EXTRACTION DE DONNEES ########################################
 
   # 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
-  tar_target(biodiv_years, 
+  tar_target(biodiv_years, {
+    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(connection_abondances_bd))
     dbGetQuery(connection_abondances_bd, requete.biodiv)
-  ),
+  }),
 
   # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
-  tar_target(obs_years_taxon, 
+  tar_target(obs_years_taxon,{
+    connection_abondances_bd = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
+    on.exit(dbDisconnect(connection_abondances_bd))
     dbGetQuery(connection_abondances_bd, requete.taxons)
-  ),
+  }),
 
 
 
