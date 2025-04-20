@@ -199,10 +199,6 @@ list(
     dbGetQuery(connection_abondances_bd, requete.taxons)
   ),
 
-  # Déconnection du serveur 
-  tar_target(deconnection_abondances_bd, 
-           dbDisconnect(connection_abondances_bd)
-  ),
 
 
 ### ANALYSES ET VISUALISATION ##################################################
@@ -215,6 +211,11 @@ list(
   # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(figures_2_3, 
     creer.figures.2.3(obs_years_taxon)
+  ),
+
+### DÉCONNEXION DU SERVEUR ####################################### 
+  tar_target(deconnection_abondances_bd, 
+    dbDisconnect(connection_abondances_bd)
   )
 
 )
