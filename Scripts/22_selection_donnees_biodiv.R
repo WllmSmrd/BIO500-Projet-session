@@ -7,7 +7,7 @@
 ##################################################
 
 
-requete.biodiv <-
+requete_biodiv <-
 "SELECT 
     years,
     COUNT(DISTINCT observed_scientific_name) AS nombre_especes
