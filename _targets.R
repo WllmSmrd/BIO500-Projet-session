@@ -177,7 +177,7 @@ list(
 
 
 #ETAPE 4: Déconnection du serveur 
-  tar_target(deconnection_abondances_bd 
+  tar_target(deconnection_abondances_bd, 
     dbDisconnect(abondances_bd)
   ),
 
