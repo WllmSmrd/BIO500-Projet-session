@@ -91,7 +91,7 @@ list(
                                               #gérer les abondances négatives
  
     # 8/ Évaluer la présence de caractères spéciaux problématiques pour les observations
-    Detecter.special.char.obs(ab.annee.x.y)) 
+    Detecter.special.char.obs(ab.annee.x.y) 
     # Pour ^ : On observe "^" dans $unit qui correspond à un exposant donc ok.
     # Pour @ : On observe "@" dans $title puisque des adresses courriels sont inclus dans cette colonne donc ok.
     # Pour - : On observe "-" dans $unit, $values, $title et $coordo_y. Ça représente un exposant négatif dans values et unit, les coordonnées en y sont toutes négatives, et c'est possible de retrouver ce symbole dans un contexte textuel dans le titre. Donc, tout est ok.
@@ -201,7 +201,7 @@ list(
 
   # 24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
   tar_target(figure_1, 
-  creer.figure.1(biodiv_years)
+    creer.figure.1(biodiv_years)
   ),
 
   # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
