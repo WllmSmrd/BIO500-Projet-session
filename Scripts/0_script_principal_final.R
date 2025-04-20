@@ -123,7 +123,8 @@ source("./Scripts/21_verifier_injection_sql.R")
 verifier.injection.sql(abondances_bd)
 
 
-### REQUETES POUR EXTRACTION DE DONNEES ###################################
+
+### REQUETES POUR EXTRACTION DE DONNEES ########################################
 
 # 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
 source("./Scripts/22_selection_donnees_biodiv.R")
@@ -134,13 +135,14 @@ source("./Scripts/23_selection_donnees_taxons.R")
 obs_years_taxon <- dbGetQuery(abondances_bd, requete.taxons)
 
 
-### ANALYSES ################################
 
-#24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
+### ANALYSES ET VISUALISATION ##################################################
+
+# 24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
 source("./Scripts/24_creer_figure_1.R")
 creer.figure.1(biodiv_years)
 
-#25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
+# 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
 source("./Scripts/25_creer_figures_2_3.R")
 creer.figures.2.3(obs_years_taxon)
 
