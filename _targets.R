@@ -32,7 +32,9 @@ source("./Scripts/16_creation_dataframe_obs.R")
 source("./Scripts/17_table_taxo_sql.R")
 source("./Scripts/18_table_ref_sql.R")
 source("./Scripts/19_table_obs_sql.R")
-source("./Scripts/20_injecter.R")
+source("./Scripts/20.1_injecter_obs.R")
+source("./Scripts/20.2_injecter_ref.R")
+source("./Scripts/20.3_injecter_taxo.R")
 source("./Scripts/21_verifier_injection_sql.R")
 source("./Scripts/22_selection_donnees_biodiv.R")
 source("./Scripts/23_selection_donnees_taxons.R")
@@ -174,7 +176,9 @@ list(
   tar_target(injection_sql, {
     
     # 20/ Injecter données dans base de données SQL
-    injection(abondances_bd)
+    injection_obs(table_obs)
+    injection_ref(table_ref)
+    injection_taxo(table_taxo)
     
     # 21/ Lister les tables pour vérifier qu'elles sont bien dans la BD
     verifier.injection.sql(abondances_bd)

@@ -115,8 +115,12 @@ source("./Scripts/19_table_obs_sql.R")
 dbSendQuery(abondances_bd,Creer.table.obs)
 
 # 20/ Injecter données dans base de données SQL
-source("./Scripts/20_injecter.R")
-injection(abondances_bd)
+source("./Scripts/20.1_injecter_obs.R")
+source("./Scripts/20.2_injecter_ref.R")
+source("./Scripts/20.3_injecter_taxo.R")
+injection_obs(table_obs)
+injection_ref(table_ref)
+injection_taxo(table_taxo)
 
 # 21/ Lister les tables pour vérifier qu'elles sont bien dans la BD
 source("./Scripts/21_verifier_injection_sql.R")
