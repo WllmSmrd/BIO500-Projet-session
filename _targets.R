@@ -193,14 +193,14 @@ list(
   tar_target(biodiv_years, {
     con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
     on.exit(dbDisconnect(con))
-    biodiv_years = dbGetQuery(con, requete.biodiv)
+    biodiv_years <- dbGetQuery(con, requete.biodiv)
   }),
 
   # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(obs_years_taxon, {
     con = dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
     on.exit(dbDisconnect(con))
-    obs_years_taxon = dbGetQuery(con, requete.taxons)
+    obs_years_taxon <- dbGetQuery(con, requete.taxons)
   }),
 
 
