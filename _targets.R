@@ -67,7 +67,7 @@ list(
   ),
 
   #2/ Importer et combiner tous les csv d'observations en un seul objet
-  tar_target(donnees_brutes, 
+  tar_target(donnees, 
     combiner.csv(path_obs)
   ),
   
