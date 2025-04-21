@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1122,13 +1122,6 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 138.
 
 
-Package mdframed Info: mdframed works in twoside mode on input line 167.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 167.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 167.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 167.
 <../figure_1_esp_par_annee.pdf, id=30, 1011.78pt x 433.62pt>
 File: ../figure_1_esp_par_annee.pdf Graphic file (type pdf)
 <use ../figure_1_esp_par_annee.pdf>
@@ -1201,18 +1194,18 @@ Package rerunfilecheck Info: File `Article_BIO500.out' has not changed.
 (rerunfilecheck)             Checksum: 21CE3720D489050769DB3D78B092E0D8;471.
  ) 
 Here is how much of TeX's memory you used:
- 30507 strings out of 471545
- 572647 string characters out of 5516905
- 990816 words of memory out of 5000000
- 56288 multiletter control sequences out of 15000+600000
- 706894 words of font info for 185 fonts, out of 8000000 for 9000
+ 30351 strings out of 471545
+ 568385 string characters out of 5516905
+ 988375 words of memory out of 5000000
+ 56136 multiletter control sequences out of 15000+600000
+ 705034 words of font info for 182 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 117i,14n,121p,1011b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,14n,121p,1011b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Article_BIO500.pdf (2 pages, 190249 bytes).
+Output written on Article_BIO500.pdf (2 pages, 189878 bytes).
 PDF statistics:
  152 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
  16 named destinations out of 1000 (max. 500000)
- 58948 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 56900 words of extra memory for PDF output out of 61914 (max. 10000000)
 
