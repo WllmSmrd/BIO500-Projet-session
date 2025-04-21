@@ -22,14 +22,13 @@ abstract: |
 keywords:
   - abondance
   - taxonomie
-  - Communauté
-  - optional
-  - optional
+  - communautés
+  - séries temporelles
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle
 
-bibliography: pnas-sample.bib
+bibliography: BIO500_Article.bib
 csl: pnas.csl
 
 ## change to true to add optional line numbering
