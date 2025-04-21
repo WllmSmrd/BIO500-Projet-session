@@ -132,11 +132,11 @@ verifier.injection.sql(con)
 
 # 22/ Sélectionner les données qui seront utilisées pour l'analyse de la question 1 (biodiversité à travers les années)
 source("./Scripts/22_selection_donnees_biodiv.R")
-biodiv_years <- dbGetQuery(con, requete.biodiv)
+biodiv_years <- dbGetQuery(con, selection_biodiv)
 
 # 23/ Sélectionner les données qui seront utilisées pour l'analyse des questions 2 et 3 (taxons à travers les années)
 source("./Scripts/23_selection_donnees_taxons.R")
-obs_years_taxon <- dbGetQuery(con, requete.taxons)
+obs_years_taxon <- dbGetQuery(con, selection_taxons)
 
 
 
