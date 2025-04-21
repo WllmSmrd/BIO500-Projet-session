@@ -8,5 +8,5 @@
 injection_ref <- function(table){
 con <- dbConnect(RSQLite::SQLite(), dbname = "./database_series_temporelles.db")
 on.exit(dbDisconnect(con))
-dbWriteTable(con, append = TRUE, name = "references", value = table, row.names = FALSE) #permet d'injecter les données de references#
+dbWriteTable(con, append = TRUE, name = "references", value = table, row.names = FALSE, overwrite = TRUE) #permet d'injecter les données de references#
 }

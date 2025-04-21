@@ -9,6 +9,7 @@ library(dplyr)
 library(tidyverse)
 library(stringr)
 library(RSQLite)
+library(rticles)
 
 tar_option_set(packages = c("dplyr", "tidyverse", "stringr", "RSQLite"))
 
