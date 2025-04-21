@@ -37,8 +37,6 @@ lineno: false
 output: rticles::pnas_article
 ---
 
-# Introduction 
-
 À travers le temps, nos écosystèmes se sont formés grâce à une grande diversité d’espèces animales et végétales. Cette richesse spécifique, retrouvé sur Terre, est intrinsèquement et de manière pragmatique essentiel à la survie des êtres humains (Kissling, 2018). Malgré la reconnaissance de ces faits et des efforts de conservations constants au maintient de la biodiversité, elle continue de décliner à un rythme alarmant (Kissling, 2018; Newbold, 2016). Plusieurs populations largement répandues ainsi que des espèces menacées sont en déclins (Tittensor, 2014). Combiné avec l’exploitation humaine des écosystèmes terrestres et des écosystèmes marins, ses facteurs en résultent en un biotope Terrestre qui est utilisé au delà de sa durabilité (Kissling, 2018). À la suite d’analyses statistiques et d’observations d’une banque de données d’une série temporelle comportant des échantillonnages entre les années 1950 et 2020, incluant une variété de taxon végétal et animal, nous en sommes arrivé à trois questions de recherche. La première est : Observe-t-on un déclin de la biodiversité à travers les années? La deuxième question est : Quel taxon a-t-on le plus (ou le moins) observé à travers les années? Puis la dernière est : Quel taxon a le plus décliné depuis les années 1970? Pour répondre à ces questions, nous avons effectuées d’autres analyses statistiques. Elles consistaient l’abondance des différentes espèces retrouvées à travers les années. Avec la répartition de l’abondance des espèces, elle nous permet d’obtenir des preuves sur le niveau de rareté (ou non) d’une espèce particulière selon d’autres espèces (Matthews, 2015)."
 
 
