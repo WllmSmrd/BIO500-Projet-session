@@ -4,22 +4,24 @@ title: "Dynamique des communautés"
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 
 author:
-  - name: "Kyara Boisvert"
-    affiliation: "Université de Sherbrooke, Département d'écologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1N 3C6" 
-  - name: "Zoé Chol"
-    affiliation: "Université de Sherbrooke, Département d'écologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1N 3C6"
-  - name: "William Simard"
-    affiliation: "Université de Sherbrooke, Département d'écologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1N 3C6"
-
-
+  - name: Kyara Boisvert
+    affiliation: a
+  - name: Zoé Chol
+    affiliation: a
+  - name: William Simard
+    affiliation: a
+address:
+  - code: a
+    address: Université de Sherbrooke, Département d'écologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1N 3C6
+  
 
 abstract: |
   Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
 
 
 keywords:
-  - "abondance"
-  - "taxonomie"
+  - abondance
+  - taxonomie
   - optional
   - optional
   - optional
@@ -39,31 +41,26 @@ output: rticles::pnas_article
 À travers le temps, nos écosystèmes se sont formés grâce à une grande diversité d’espèces animales et végétales. Cette richesse spécifique, retrouvé sur Terre, est intrinsèquement et de manière pragmatique essentiel à la survie des êtres humains (Kissling, 2018). Malgré la reconnaissance de ces faits et des efforts de conservations constants au maintient de la biodiversité, elle continue de décliner à un rythme alarmant (Kissling, 2018; Newbold, 2016). Plusieurs populations largement répandues ainsi que des espèces menacées sont en déclins (Tittensor, 2014). Combiné avec l’exploitation humaine des écosystèmes terrestres et des écosystèmes marins, ses facteurs en résultent en un biotope Terrestre qui est utilisé au delà de sa durabilité (Kissling, 2018). À la suite d’analyses statistiques et d’observations d’une banque de données d’une série temporelle comportant des échantillonnages entre les années 1950 et 2020, incluant une variété de taxon végétal et animal, nous en sommes arrivé à trois questions de recherche. La première est : Observe-t-on un déclin de la biodiversité à travers les années? La deuxième question est : Quel taxon a-t-on le plus (ou le moins) observé à travers les années? Puis la dernière est : Quel taxon a le plus décliné depuis les années 1970? Pour répondre à ces questions, nous avons effectuées d’autres analyses statistiques. Elles consistaient l’abondance des différentes espèces retrouvées à travers les années. Avec la répartition de l’abondance des espèces, elle nous permet d’obtenir des preuves sur le niveau de rareté (ou non) d’une espèce particulière selon d’autres espèces (Matthews, 2015)."
 
 
-### Méthode:
+# Méthode
 
 Afin de réaliser les analyses statistiques, la banque de données, nommée séries temporelles, a été fourni par Biodiversité Québec. Ces données ont été récoltées sur plusieurs décennies, de 1950 à 2020. Cette banque nous a permis de réaliser plusieurs analyses statistiques. Pour débuter, nous avons importé les données taxonomiques dans le logiciel R. Par la suite, nous avons procédé par un nettoyage de l’information de manière à avoir une base précise. Ensuite, une analyse statistique a été fait dans le but de créer des data frame contenant les éléments, tel que les noms scientifiques, les années, les coordonnées, les sources qui procuraient l’information, etc. Ces data frame ont permis de créer de nouvelles bases de données utilisées dans logiciel SQL de R studio. Puis ces nouveaux data frame ont été utilisés pour créer les figures trois figures suivantes. Le premier graphique a été conçu à l’aide de la fonction “plot”. Le type de lignes, l’épaisseur de la ligne ainsi que la couleur de celle-ci ont été défini selon les caractéristiques désirées. Ce graphique représente la richesse spécifique par année selon le nombre d’espèces observées. La figure deux, est un graphique à bar (fonction “bar plot”) qui représente les différentes classes taxonomiques ainsi que le nombre d’observation sur une échelle logarithmique. Des caractéristiques spécifiques tel que la couleur des bandes et leurs bordures ont été attribués. Et la troisième figure, est aussi un graphique à bar représentant les variations, en pourcentage, des espèces observées selon les différentes classes à partir des années 1970. Les bandes rouges représentent les diminutions en abondances des espèces et les bandes vertes sont les augmentations depuis 1970 selon chaque classes taxonomiques observées." 
 
 
-### Résultats:
+# Résultats
 
 Les analyses ont démontré, pour la figure 1, qu’il y a eu une augmentation dans la richesse des espèces entre les années 1950 et ~ 1993. De plus, nous observons, sur la figure 1, une forte augmentation du nombre d’espèces observées lors des années 1970. Cependant, nous pouvons aussi voir un déclin dans l’abondance des espèces à partir de l’année 1995. À la suite de cette année, 1995, il y a quelques hausses d’espèces observées, mais de façon générale on remarque un déclin qui s’aggrave d’années en années. Ce qu’on constate pour la figure 2, sont les observations par classes taxonomiques sur une échelle logarithmique. La classe qui a le plus grand nombre total d’observations est les Teleosteis. En revanche, celle qui en a le moins est les Petromyzontis. Pour la troisième figure, on observe les variations, en pourcentage, des différentes classes taxonomiques depuis les années 1970. Les bandes vertes sont des valeurs positives démontrant une augmentation d’espèces de cette classe et les bandes rouges sont des diminutions dans le nombre d’espèces observées, donc des valeurs négatives. Pour cette figure, la classe des Amphibia est celle qui a la plus grande variation (500%). Les classes Chondrostei et Equisetopsida ont une valeur respective de 100%. Dans les valeurs négatives, on constate que la classe Aves est celle qui a la plus grande diminution avec une valeur de - 99%. Nous pouvons aussi observer une valeur de 0 pour la classe des Petromyzontis."
  
   
-### Discussion:
+# Discussion
 
 
-### Conclusion
+# Conclusion
 
 
-### Bibliographie:
+# Bibliographie
 This PNAS journal template is provided to help you write your work in the correct journal format. Instructions for use are provided below.
 
 
 
 <!-- Leave these lines as they are at the end of your .Rmd file to ensure placement of methods & acknowledgements sections before the references-->
 
-```{=tex}
-\showmatmethods
-\showacknow
-\pnasbreak
-```
