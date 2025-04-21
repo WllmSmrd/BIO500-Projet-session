@@ -46,7 +46,7 @@ source("./Scripts/25_creer_figures_2_3.R")
 # Pipeline
 list(
 
-### ÉTABLIR LE CHEMIN D'ACCES VERS LES DONNEES ###########################
+### ETABLIR LE CHEMIN D'ACCES VERS LES DONNEES #################################
   
   tar_target(
     name = path_obs, # Cible
@@ -64,12 +64,12 @@ list(
   
 ### IMPORTATION DES DONNEES ####################################################
 
-  #1/ Importer les données relatives à la taxonomie
+  # 1/ Importer les données relatives à la taxonomie
   tar_target(taxo, 
     import.taxo(path_taxo)
   ),
 
-  #2/ Importer et combiner tous les csv d'observations en un seul objet
+  # 2/ Importer et combiner tous les csv d'observations en un seul objet
   tar_target(donnees, 
     combiner.csv(path_obs)
   ),
@@ -82,38 +82,38 @@ list(
   tar_target(obs.clean, {
   
     # 3/ Corriger les colonnes qui se sont dédoublées à cause de fautes d'orthographe/non conformité des noms de colonnes
-    donnees.col.corr = corriger.col(donnees) 
+    donnees_col_corr = corriger.col(donnees) 
   
     # 4/ Séparer les annees et abondances pour avoir 1 ligne = 1 année, 1 abondance
-    ab.annee = Separer.annee.abondance(donnees.col.corr)
+    ab_annee = Separer.annee.abondance(donnees_col_corr)
   
     # 5/ Effacer les observations doublons
-    ab.annee.simple = Supprimer.doublons(ab.annee) 
+    ab_annee_simple = Supprimer.doublons(ab_annee) 
   
     # 6/ Séparer les coordonnees gps en colonnes x et y
-    ab.annee.x.y = Separer.coordo.gps(ab.annee.simple)
+    ab_annee_x_y = Separer.coordo.gps(ab_annee_simple)
   
     # 7/ Vérifier les abondances négatives
-    Verifier.abondance.negative(ab.annee.x.y) #La fonction nous retourne qu'il n'y a 
+    Verifier.abondance.negative(ab_annee_x_y) #La fonction nous retourne qu'il n'y a 
                                               #aucune valeur négative d'abondance, 
                                               #donc pas besoin de créer une fonction pour 
                                               #gérer les abondances négatives
  
     # 8/ Évaluer la présence de caractères spéciaux problématiques pour les observations
-    Detecter.special.char.obs(ab.annee.x.y) 
+    Detecter.special.char.obs(ab_annee_x_y) 
     # Pour ^ : On observe "^" dans $unit qui correspond à un exposant donc ok.
     # Pour @ : On observe "@" dans $title puisque des adresses courriels sont inclus dans cette colonne donc ok.
     # Pour - : On observe "-" dans $unit, $values, $title et $coordo_y. Ça représente un exposant négatif dans values et unit, les coordonnées en y sont toutes négatives, et c'est possible de retrouver ce symbole dans un contexte textuel dans le titre. Donc, tout est ok.
     # Pour ? : On observe "?" dans $unit et $title.Pour le titre, c'est ok puisqu'un titre d'article scientifique peut être une question. Pour $unit par contre, ça signifie qu'il y a de l'incertitude quant aux unités de mesure de l'abondance
  
     # 9/ Creer une colonne notes pour gerer la presence de "?" dans $unit sans perdre l'information d'incertitude
-    ajout.notes = creer.col.notes(ab.annee.x.y)
+    ajout_notes = creer.col.notes(ab_annee_x_y)
 
     # 10/ Corriger les "?" dans la colonne $unit et inscrire l'information d'incertitude dans la colonne notes
-    obs.corrigee.unit = corriger.unit(ajout.notes)
+    obs_corrigee_unit = corriger.unit(ajout_notes)
   
     # 13/ Assigner le bon type de données à chaque colonne de l'objet observations
-    obs.clean = assigner.type.obs(obs.corrigee.unit)
+    obs_clean = assigner.type.obs(obs_corrigee_unit)
   
   }),
 
@@ -126,10 +126,10 @@ list(
     #Pour - : on observe "-" dans $vernacular_fr et c'est normal puisque le nom français des espèces peut contenir ce symbole. Donc c'est ok
 
     # 12/ Insérer des NA dans les cases vides de l'objet taxo 
-    taxo.NA = insert.na(taxo)
+    taxo_NA = insert.na(taxo)
 
     # 14/ Assigner le bon type de données à chaque colonne du dataframe taxonomie (maintenant prêt à injection)     
-    table_taxo = assigner.type.taxo(taxo.NA)
+    table_taxo = assigner.type.taxo(taxo_NA)
 
   }),
 
@@ -139,12 +139,12 @@ list(
 
   # 15/ Création dataframe pour references (maintenant prêt à injection)
   tar_target(table_ref, 
-    creer.ref(obs.clean)
+    creer.ref(obs_clean)
   ),
 
   # 16/ Création dataframe observations (maintenant prêt à injection)
   tar_target(table_obs, 
-    creer.obs(obs.clean)
+    creer.obs(obs_clean)
   ),
 
 
@@ -225,6 +225,14 @@ list(
   # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(figures_2_3, 
     creer.figures.2.3(obs_years_taxon)
-  )
+  ),
+
+
+
+### PRODUCTION DU RAPPORT ######################################################
+
+  tar_render(
+    Article_BIO500, 
+    "./Article_BIO500/Article_BIO500.Rmd")
 
 )
