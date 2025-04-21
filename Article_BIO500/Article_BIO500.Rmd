@@ -16,13 +16,13 @@ address:
   
 
 abstract: |
-  Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
+  La Terre sert d’habitat pour plusieurs espèces et chacune d’entre eux ont une importance. Les écosystèmes retrouvés sur notre planète permettent d’assurer la survie des êtres humains. Cependant, plusieurs personnes ont des désirs plus grand que la survie, ce qui cause la destruction des écosystèmes, causant ainsi des déclins dans les différentes populations ou même l’extinction de certaines espèces. De cette façon, des études sur la biodiversité son possible afin d’observer l’état de celle-ci pour ensuite sensibiliser, conserver et préserver les écosystèmes. Aussi, des analyses statistiques permettent d’obtenir de l’information importantes afin de confirmer ou d’infirmer des prémisses.
 
 
 keywords:
   - abondance
   - taxonomie
-  - optional
+  - Communauté
   - optional
   - optional
 
@@ -37,6 +37,8 @@ lineno: false
 
 output: rticles::pnas_article
 ---
+
+# Introduction 
 
 À travers le temps, nos écosystèmes se sont formés grâce à une grande diversité d’espèces animales et végétales. Cette richesse spécifique, retrouvé sur Terre, est intrinsèquement et de manière pragmatique essentiel à la survie des êtres humains (Kissling, 2018). Malgré la reconnaissance de ces faits et des efforts de conservations constants au maintient de la biodiversité, elle continue de décliner à un rythme alarmant (Kissling, 2018; Newbold, 2016). Plusieurs populations largement répandues ainsi que des espèces menacées sont en déclins (Tittensor, 2014). Combiné avec l’exploitation humaine des écosystèmes terrestres et des écosystèmes marins, ses facteurs en résultent en un biotope Terrestre qui est utilisé au delà de sa durabilité (Kissling, 2018). À la suite d’analyses statistiques et d’observations d’une banque de données d’une série temporelle comportant des échantillonnages entre les années 1950 et 2020, incluant une variété de taxon végétal et animal, nous en sommes arrivé à trois questions de recherche. La première est : Observe-t-on un déclin de la biodiversité à travers les années? La deuxième question est : Quel taxon a-t-on le plus (ou le moins) observé à travers les années? Puis la dernière est : Quel taxon a le plus décliné depuis les années 1970? Pour répondre à ces questions, nous avons effectuées d’autres analyses statistiques. Elles consistaient l’abondance des différentes espèces retrouvées à travers les années. Avec la répartition de l’abondance des espèces, elle nous permet d’obtenir des preuves sur le niveau de rareté (ou non) d’une espèce particulière selon d’autres espèces (Matthews, 2015)."
 
@@ -53,9 +55,15 @@ Les analyses ont démontré, pour la figure 1, qu’il y a eu une augmentation d
   
 # Discussion
 
+En ce qui concerne la première question de recherche, observe-t-on un déclin de la biodiversité à travers les années, la figure 1 est la clé pour répondre. Nous remarquons qu’entre les années 1950 à 1970 le nombre d’espèces observées est plus faible que les années suivantes. Cette faible augmentation, dans les observations, peut être reliées à un manque d’échantillonnage de la part des chercheurs ou simplement qu’aux endroits étudiés l’abondance des espèces étaient moins prononcées. De plus, à l’année 1970 il y a une hausse dans le nombre d’observations de manière drastique. Cette hausse ce fait de façon constante jusqu’aux années 1990 et plus précisément 1993/1994. À partir de ces années, un déclin dans la richesse spécifique est visible. Ce déclin peut être relié à l’endroit où les données ont été récoltées. Par exemple, selon Newbold et al., l’impact sur la biodiversité diffère selon les biomes étudiés. Les biomes les plus sous représentés sont les forêts boréales, les toundras, les prairies inondées, les savanes ainsi que les mangroves (Newbold, 2016). Donc, les espèces retrouvées dans ces milieux sont sujettes à un biais de l’emplacement de leur habitat. De plus, depuis les années 1980 des préoccupations sont levées à propos de la vitesse à laquelle les espèces sont perdues de leurs écosystèmes (Cardinale, 2012). Qui plus est, sur le graphique de la figure 1, nous remarquons une diminution constante dans le nombre d’observation à partir des années 2000. Donc, un déclin dans la biodiversité à travers le temps est observé et ce déclin est causé par l’activité humaine (Matthews, 2015)." 
+
+Pour répondre à la deuxième question de recherche qui consiste à déterminer quel taxon à été le plus (ou le moins) observé à travers les années, la deuxième figure est à la base de la réponse. La classe avec le plus grand nombre d’observations est celle des Teleosteis et celle ayant le moins d’observations est les Petromyzontis. Cependant, lors des analyses statistiques, l’unité d’échantillonnage utilisé n’était pas la même pour chaque classe. Donc, ceci peut avoir créé un biais lors des analyses finales."
+
+Dans le but de répondre à la dernière question de recherche, étant quel taxon à le plus décliné depuis les années 1970, nous allons utiliser la troisième et dernière figure. Dans cette figure, nous pouvons observer les différentes variations selon la classe. La classe démontrant le plus grand déclin est celle des Aves, les oiseaux. Une diminution de 99% est observé. Toutefois, les données pour créer ce graphique inclut seulement les observations depuis les années 1970, puisqu’entre 1950 et 1970 il y avait très peu d’échantillons récoltés. Alors, en considérant les données depuis 1970 un biais dans l’analyse est créé. Comme démontré dans la littérature, les activités anthropiques ne font qu’accélérer le déclin dans l’abondance des espèces (Matthews, 2015). Ce déclin est de plus en plus observé depuis les années 2010 où la biodiversité, à l’échelle Terrestre, diminue grandement et rapidement (Cardinale, 2012)."
 
 # Conclusion
 
+Pour conclure, à travers le temps nous pouvons observé une diminution dans la richesse spécifique des différentes espèces retrouvées dans les écosystèmes terrestre. Selon leur environnement, certaines espèces sont plus susceptibles que d’autres à un déclin dans leur population. Malgré, la reconnaissance des effets anthropiques sur les écosystèmes et leurs espèces, l’Homme doit continuer à s’améliorer afin d’assurer la conservation et la préservation des biomes. 
 
 # Bibliographie
 This PNAS journal template is provided to help you write your work in the correct journal format. Instructions for use are provided below.
