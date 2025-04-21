@@ -1,9 +1,14 @@
 # BIO500-Projet-session
 
+### AUTEURS ####################################################################
+
+William Simard 
+Zoé Chol
+Kyara Boisvert
 
 ### DESCRIPTION DU PROJET ######################################################
 
-#Objectif 
+#Contexte et objectif 
 
 Dans le cadre du cours BIO500, l'objectif de ce travail de session est de répondre 
 à la question suivante : Comment les variations spatiales et temporelles influent-elles 
@@ -15,16 +20,12 @@ L'analyse d'un inventaire écologique nous permettra de répondre à cette quest
 #Données
 
 Notre inventaire écologique est constitué de séries temporelles issues de mesures 
-répétées de taille de population. 
-
-Résolution spatiale et temporelle : 
-
-- 8248 suivis de populations
-- Entre 2 et ~40 mesures répétées
-- Données : espèces, année, coordonnées spatiales, taille de population
+répétées d'abondance de populations de différentes espèces. Ces données proviennent
+de l'organisation Biodiversité Québec.
 
 
 #Méthodes
+
 
 
 #Résultats 
@@ -33,11 +34,20 @@ Résolution spatiale et temporelle :
 
 ### STRUCTURE DU REPERTOIRE ####################################################
 
-Le répertoire contient un dossier de données `Data` et un dossier de scripts `Scripts` :
+Dossiers:
 
 - `Data`comprend l'ensemble des données de séries temporelles et de taxonomie utilisées pour l'analyse
 - `Scripts` comprend l'ensemble des scripts créés pour l'analyse
+- `_targets` comprend toutes les targets créées dans le pipeline du projet
+- `Article_BIO500` comprend tous les fichiers associés à la création du rapport
 
+Fichiers:
+
+- `README.md` le présent document expliquant l'organisation du répertoire
+- `figure_1_esp_par_annee.pdf` figure 1 du rapport
+- `figure_2_obs_par_classe.pdf` figure 2 du rapport
+- `figure_3_declin_classe.pdf` figure 1 du rapport
+- `database_series_temporelles.db` serveur de la base de données SQL du projet
 
 #Description des données (dossier Data)
 ## Fichiers de données
@@ -147,7 +157,9 @@ Les scripts suivant regroupent les fonctions utilisées pour créer les tables d
               - `title` Titre du jeu de données dont les données sont extraites (qui sert de clé secondaire pour relier les tables observations et references)
 
 Les scripts suivant regroupent les fonctions utilisées pour injecter les données dans les tables SQL à des fins d'archivage:
-- `20_injecter.R`  
+- `20.1_injecter_obs.R` 
+- `20.2_injecter_ref.R`
+- `20.3_injecter_taxo.R`
 - `21_verifier_injection.R`
 
 Les scripts suivant regroupent les fonctions utilisées pour extraire des tables SQL les données utilisées pour l'analyse:
@@ -158,20 +170,11 @@ Les scripts suivant regroupent les fonctions utilisées pour produire les figure
 - `24_creer_figure_1.R`
 - `25_creer_figures_2_3.R`
    
-   
-              
-### INSTRUCTIONS ###############################################################
 
+### INSTRUCTIONS ##################################################
 
-### AUTEURS ####################################################################
-
-William Simard 
-Zoé Chol
-Kyara Boisvert
-
-
-
-
+Pour exécuter le projet
+  - ouvrir le fichier 
 
 
 
