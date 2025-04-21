@@ -223,7 +223,7 @@ list(
 
   # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
   tar_target(figures_2_3, 
-    creer.figures.2.3(obs_years_taxon),
+    creer.figures.2.3(obs_years_taxon)
   )
 
 )

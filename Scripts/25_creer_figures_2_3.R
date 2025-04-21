@@ -40,7 +40,7 @@ creer.figures.2.3 <- function(data){
   pdf("figure_3_declin_classe.pdf", width = 14, height = 6) #pour exportation de la figure en pdf
   par(mfrow = c(1,1), mar = c(10, 6, 4, 2), mgp = c(4, 1, 0))                  # aucun fractionnement de la fenêtre graphique
 
-  obs_comparaison_1970 <- obs_years_taxon %>%
+  obs_comparaison_1970 <- data %>%
     filter(!is.na(years), years >= 1970, !is.na(Nb_obs)) %>%
     group_by(class) %>%
     arrange(years) %>%
