@@ -48,6 +48,7 @@ Fichiers:
 - `figure_2_obs_par_classe.pdf` figure 2 du rapport
 - `figure_3_declin_classe.pdf` figure 1 du rapport
 - `database_series_temporelles.db` serveur de la base de données SQL du projet
+- `Execution_targets.R` comprend les quelques lignes de code permettant d'exécuter le pipeline target
 
 #Description des données (dossier Data)
 ## Fichiers de données
@@ -174,7 +175,8 @@ Les scripts suivant regroupent les fonctions utilisées pour produire les figure
 ### INSTRUCTIONS ##################################################
 
 Pour exécuter le projet
-  - ouvrir le fichier 
+  - ouvrir le fichier Execution_targets.R
+  - éxécuter le code du script
 
 
 
