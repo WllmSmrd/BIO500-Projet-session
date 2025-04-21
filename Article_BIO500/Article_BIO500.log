@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,14 +1129,14 @@ Package mdframed Info: mdframed inside a box
  mdframed uses option nobreak mdframed on input line 167.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 167.
-<../figure_1_esp_par_annee.pdf, id=27, 1011.78pt x 433.62pt>
+<../figure_1_esp_par_annee.pdf, id=30, 1011.78pt x 433.62pt>
 File: ../figure_1_esp_par_annee.pdf Graphic file (type pdf)
 <use ../figure_1_esp_par_annee.pdf>
 Package pdftex.def Info: ../figure_1_esp_par_annee.pdf  used on input line 180.
 (pdftex.def)             Requested size: 246.09686pt x 105.467pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.64998pt on input line 180.
-<../figure_2_obs_par_classe.pdf, id=29, 1011.78pt x 433.62pt>
+<../figure_2_obs_par_classe.pdf, id=32, 1011.78pt x 433.62pt>
 File: ../figure_2_obs_par_classe.pdf Graphic file (type pdf)
 <use ../figure_2_obs_par_classe.pdf>
 Package pdftex.def Info: ../figure_2_obs_par_classe.pdf  used on input line 189.
@@ -1152,7 +1152,7 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 
 
  <../figure_1_esp_par_annee.pdf>]
-<../figure_3_declin_classe.pdf, id=56, 1011.78pt x 433.62pt>
+<../figure_3_declin_classe.pdf, id=59, 1011.78pt x 433.62pt>
 File: ../figure_3_declin_classe.pdf Graphic file (type pdf)
 <use ../figure_3_declin_classe.pdf>
 Package pdftex.def Info: ../figure_3_declin_classe.pdf  used on input line 205.
@@ -1160,36 +1160,36 @@ Package pdftex.def Info: ../figure_3_declin_classe.pdf  used on input line 205.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--279
+Underfull \hbox (badness 10000) in paragraph at lines 275--280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--286
+Underfull \hbox (badness 10000) in paragraph at lines 282--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--293
+Underfull \hbox (badness 10000) in paragraph at lines 289--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--300
+Underfull \hbox (badness 10000) in paragraph at lines 296--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--306
+Underfull \hbox (badness 10000) in paragraph at lines 303--307
 
  []
 
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 314.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 315.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 314.
+(Font)              scaled to size 6.64998pt on input line 315.
 [2 <../figure_2_obs_par_classe.pdf> <../figure_3_declin_classe.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./Article_BIO500.aux)
@@ -1198,21 +1198,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `Article_BIO500.out' has not changed.
-(rerunfilecheck)             Checksum: A1CB4B376EEB357F00B94A4E5441635C;358.
+(rerunfilecheck)             Checksum: 21CE3720D489050769DB3D78B092E0D8;471.
  ) 
 Here is how much of TeX's memory you used:
- 30521 strings out of 471545
- 572785 string characters out of 5516905
+ 30507 strings out of 471545
+ 572647 string characters out of 5516905
  990816 words of memory out of 5000000
- 56289 multiletter control sequences out of 15000+600000
- 710390 words of font info for 192 fonts, out of 8000000 for 9000
+ 56288 multiletter control sequences out of 15000+600000
+ 706894 words of font info for 185 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  117i,14n,121p,1011b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Article_BIO500.pdf (2 pages, 221668 bytes).
+<c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Article_BIO500.pdf (2 pages, 190249 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
+ 152 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
  16 named destinations out of 1000 (max. 500000)
- 60988 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 58948 words of extra memory for PDF output out of 61914 (max. 10000000)
 
