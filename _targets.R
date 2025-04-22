@@ -219,12 +219,20 @@ list(
 
   # 24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
   tar_target(figure_1, 
-    creer.figure.1(biodiv_years)
+    creer.figure.1(biodiv_years),
+    format = "file"
   ),
 
-  # 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
-  tar_target(figures_2_3, 
-    creer.figures.2.3(obs_years_taxon)
+  # 25/ Figure pour l'analyse de la question 2 (taxons à travers les années)
+  tar_target(figures_2, 
+    creer.figure.2(obs_years_taxon),
+    format = "file"
+  ),
+
+  # 26/ Figure pour l'analyse de la question 3
+  tar_target(figure_3,
+    creer.figure.3(obs_years_taxon),
+    format = "file"
   ),
 
 
@@ -233,6 +241,12 @@ list(
 
   tar_render(
     Article_BIO500, 
-    "./Article_BIO500/Article_BIO500.Rmd")
+    "./Article_BIO500/Article_BIO500.Rmd",
+    params = list(
+      fig1_path = figure_1,
+      fig2_path = figure_2,
+      fig3_path = figure_3
+    )
+  )
 
 )

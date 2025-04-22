@@ -146,9 +146,13 @@ obs_years_taxon <- dbGetQuery(con, selection_taxons)
 source("./Scripts/24_creer_figure_1.R")
 creer.figure.1(biodiv_years)
 
-# 25/ Figures pour l'analyse des questions 2 et 3 (taxons à travers les années)
-source("./Scripts/25_creer_figures_2_3.R")
-creer.figures.2.3(obs_years_taxon)
+# 25/ Figure pour l'analyse de la question 2(taxons à travers les années)
+source("./Scripts/25_creer_figure_2.R")
+creer.figure.2(obs_years_taxon)
+
+# 26/ Figure pour l'analyse de la question 3
+source("./Scripts/26_creer_figure_3.R")
+creer.figure.3(obs_years_taxon)
 
 # Se déconnecter de la base de données
 dbDisconnect(con)

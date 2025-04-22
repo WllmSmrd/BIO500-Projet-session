@@ -8,3 +8,4 @@
 library(targets)
 tinytex:::install_prebuilt()
 tar_make()
+tar_visnetwork()

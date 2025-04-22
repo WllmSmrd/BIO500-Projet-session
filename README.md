@@ -169,8 +169,9 @@ Les scripts suivant regroupent les fonctions utilisées pour extraire des tables
 
 Les scripts suivant regroupent les fonctions utilisées pour produire les figures illustrant l'analyse:
 - `24_creer_figure_1.R`
-- `25_creer_figures_2_3.R`
-   
+- `25_creer_figure_2.R`
+- `26_creer_figure_3.R`   
+
 
 ### INSTRUCTIONS ##################################################
 
