@@ -40,7 +40,8 @@ source("./Scripts/21_verifier_injection_sql.R")
 source("./Scripts/22_selection_donnees_biodiv.R")
 source("./Scripts/23_selection_donnees_taxons.R")
 source("./Scripts/24_creer_figure_1.R")
-source("./Scripts/25_creer_figures_2_3.R")
+source("./Scripts/25_creer_figure_2.R")
+source("./Scripts/26_creer_figure_3.R")
 
 
 # Pipeline
@@ -219,20 +220,17 @@ list(
 
   # 24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
   tar_target(figure_1, 
-    creer.figure.1(biodiv_years),
-    format = "file"
+    creer.figure.1(biodiv_years)
   ),
 
   # 25/ Figure pour l'analyse de la question 2 (taxons à travers les années)
-  tar_target(figures_2, 
-    creer.figure.2(obs_years_taxon),
-    format = "file"
+  tar_target(figure_2, 
+    creer.figure.2(obs_years_taxon)
   ),
 
   # 26/ Figure pour l'analyse de la question 3
   tar_target(figure_3,
-    creer.figure.3(obs_years_taxon),
-    format = "file"
+    creer.figure.3(obs_years_taxon)
   ),
 
 
@@ -241,12 +239,6 @@ list(
 
   tar_render(
     Article_BIO500, 
-    "./Article_BIO500/Article_BIO500.Rmd",
-    params = list(
-      fig1_path = figure_1,
-      fig2_path = figure_2,
-      fig3_path = figure_3
-    )
-  )
+    "./Article_BIO500/Article_BIO500.Rmd")
 
 )

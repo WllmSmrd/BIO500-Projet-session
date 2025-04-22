@@ -34,10 +34,6 @@ csl: pnas.csl
 
 lineno: false
 
-params:
-  fig1_path: NULL
-  fig2_path: NULL
-  fig3_path: NULL
 
 output: rticles::pnas_article
 ---
@@ -56,14 +52,14 @@ Les analyses ont démontré qu’il y a eu une augmentation dans la richesse des
 
 
 ```{r fig.esp.annee, echo=FALSE, fig.cap="\\label{fig:esp.annee} Richesse spécifique par année", out.width="100%"}
-knitr::include_graphics(params$fig1_path)
+knitr::include_graphics("../figure_1_esp_par_annee.pdf")
 ```
 
 On observe aussi à la Figure \ref{fig:obs.classe} les observations par classe taxonomique sur une échelle logarithmique. La classe qui a le plus grand nombre total d’observations est les Teleosteis. En revanche, celle qui en a le moins est les Petromyzontis. 
 
 
 ```{r fig.obs.classe, echo=FALSE, fig.cap="\\label{fig:obs.classe} Observations par classe (échelle logarithmique)", out.width="100%"}
-knitr::include_graphics(params$fig2_path)
+knitr::include_graphics("../figure_2_obs_par_classe.pdf")
 ```
 
 
@@ -71,7 +67,7 @@ On observe finalement les variations en pourcentage des différentes classes tax
  
 
 ```{r fig.declin, echo=FALSE, fig.cap="\\label{fig:declin} Variation des observations par classe depuis 1970", out.width="100%"}
-knitr::include_graphics(params$fig3_path)
+knitr::include_graphics("../figure_3_declin_classe.pdf")
 ```
  
   

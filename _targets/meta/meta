@@ -1,28 +1,13 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-obs.clean|stem|781bd6e4cf2dca77|89c134d879077416|4e49325f20a283b5|194302172||t20199.64463012s|s339130b|339130|rds|local|vector|||4.44|There was 1 warning in mutate.ℹ In argument years  as.integeryears.Caused by warning NAs introduits lors de la conversion automatique|
-requete_biodiv|stem|caa22259382ecb1c|cc27d7f40eac9817|2c5a8ca3d7b9eee4|-1675992851||t20199.7991545107s|s165b|165|rds|local|vector|||0||
-requete_taxons|stem|503e2cb493b95140|eabbf1c98106b991|0449f1867b93f2e0|-552755373||t20199.7991550688s|s201b|201|rds|local|vector|||0||
-creer_tables_sql|stem|210a114a0989db15|cade76da8346285c|83773ccfcbb03084|117484581||t20199.7991560383s|s667b|667|rds|local|vector|||0.05|Closing open result set, pending rows. Closing open result set, pending rows. There are 1 result in use. The connection will be released when they are closed|
-path_taxo|stem|590e4305b415607b|4af7179121188dfa|2c530c1562a7fbd1|1792166754|./Data/taxonomie.csv|t20199.7839546372s|s66722b|66722|file|local|vector|||0||
-donnees|stem|b94963cc19a8c407|e979d13d5b26aa07|b0d8edd2d2b5242f|-1375965411||t20199.7992470708s|s286866b|286866|rds|local|vector|||0.57||
-biodiv_years|stem|24e4eb51e3d4b541|3b67165f020b62a8|853895088c26d1c7|-182229027||t20199.7992490405s|s461b|461|rds|local|vector|||0.12||
-obs_years_taxon|stem|a77fa0131eadf477|4d606023a8fb6774|fce2330f3d7c38e2|1091524344||t20199.7992511727s|s1344b|1344|rds|local|vector|||0.16||
-taxo|stem|d1244e7a6b59bb7f|9cd63624f73bd83d|3aeedcf42f1f7ff5|-1810004822||t20199.7992516329s|s16550b|16550|rds|local|vector|||0||
-obs_clean|stem|781bd6e4cf2dca77|97202d865c254c8d|4e49325f20a283b5|1945789481||t20199.7992998793s|s339130b|339130|rds|local|vector|||3.89|There was 1 warning in mutate.ℹ In argument years  as.integeryears.Caused by warning NAs introduits lors de la conversion automatique|
-figure_1|stem|719d94d8809905cb|e2ed5ca9e9da5539|083df0c2458609f3|-247678157||t20199.7993027755s|s83b|83|rds|local|vector|||0.2||
-figures_2_3|stem|719d94d8809905cb|e31bc343ed88e91e|5b24560a46b9eae7|-908364369||t20199.7993047558s|s83b|83|rds|local|vector|||0.14||
-table_taxo|stem|bd413c9f4ae51593|0cd2bbda71f67937|f9800b5a0dfe2470|-1480595621||t20199.7993058644s|s16556b|16556|rds|local|vector|||0.08||
-table_ref|stem|b11f9e09eed0eca8|23a7de7cd4bb835f|a1deda2e42945f41|-917293160||t20199.7993088206s|s18785b|18785|rds|local|vector|||0.21||
-table_obs|stem|96c5e245b5f1c057|02c3b92d8a9fc095|14f5edb5861ac1ae|-1878288736||t20199.7993115386s|s303290b|303290|rds|local|vector|||0||
-injection_sql|stem|4b8fd5580e088aa1|59641fd1974a0030|5fe936924cbcecaf|-1799022650||t20199.7993177196s|s1323b|1323|rds|local|vector|||0.5||
-path_obs|stem|9864db651ec01e32|61fe591de2722ccd|2c530c1562a7fbd1|1105902509|./Data/series_temporelles|t20199.7839546142s|s65536b|65536|file|local|vector|||0.01||
 Separer.coordo.gps|function|0a76c0b65e1cfdaa
 combiner.csv|function|0115bb3e57f1bfe1
 assigner.type.obs|function|861f0b1860e248c2
 selection_taxons|object|59c1562d2557e7cb
 creer.figure.1|function|71567895d154409f
 insert.na|function|7e1a3705efb8adff
+creer.figure.2|function|612773475abcf35f
 Verifier.abondance.negative|function|a8bc2271f2b743a3
+creer.figure.3|function|448fe2aeea77f074
 Supprimer.doublons|function|441b48415384cc33
 import.taxo|function|ac61f52271d3e2cc
 Detecter.special.char.obs|function|25faa6bd44f231b9
@@ -41,6 +26,10 @@ creer.obs|function|44888f2b8cc13b84
 Separer.annee.abondance|function|9a9716e6684d006c
 selection_biodiv|object|430b81a8523cd762
 injection_taxo|function|28b570a7acd9f250
-creer.figures.2.3|function|67eed680d44536ad
 creer.col.notes|function|55c3ce0cfc6c6c88
-Article_BIO500|stem|15110b45c6ecf683|6d94cb13096e54b0|aef93451a3c48453|385178404|Article_BIO500/Article_BIO500.pdf*Article_BIO500/Article_BIO500.Rmd|t20199.7992386602s||153447|file|local|vector|||0.16||argument inutilisé deps  c1, 1
+path_obs|stem|9864db651ec01e32|61fe591de2722ccd|2c530c1562a7fbd1|1105902509|./Data/series_temporelles|t20199.7839546257s|s3625187b|3625187|file|local|vector|||0||
+requete_biodiv|stem|caa22259382ecb1c|cc27d7f40eac9817|2c5a8ca3d7b9eee4|-1675992851||t20200.1042882235s|s165b|165|rds|local|vector|||0.01||
+requete_taxons|stem|503e2cb493b95140|eabbf1c98106b991|0449f1867b93f2e0|-552755373||t20200.1042885353s|s201b|201|rds|local|vector|||0||
+creer_tables_sql|stem|210a114a0989db15|cade76da8346285c|83773ccfcbb03084|117484581||t20200.1042896046s|s667b|667|rds|local|vector|||0.04|Closing open result set, pending rows. Closing open result set, pending rows. There are 1 result in use. The connection will be released when they are closed|
+path_taxo|stem|590e4305b415607b|4af7179121188dfa|2c530c1562a7fbd1|1792166754|./Data/taxonomie.csv|t20199.7839546372s|s66722b|66722|file|local|vector|||0||
+Article_BIO500|stem||5ad69eb388c0ca56|2c530c1562a7fbd1|385178404||t20200.1043066956s||0|file|local|vector|||1.42||Cannot find the files ..figure_1_esp_par_annee.pdf

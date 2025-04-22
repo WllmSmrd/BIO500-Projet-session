@@ -7,11 +7,10 @@
 
 
 creer.figure.3 <- function(data){
-  
-chemin <- "figure_3_declin_classe.pdf"
+
   
 #Figure 3 (déclin des taxons depuis 1970)
-pdf(chemin, width = 14, height = 6) #pour exportation de la figure en pdf
+pdf("figure_3_declin_classe.pdf", width = 14, height = 6) #pour exportation de la figure en pdf
 par(mfrow = c(1,1), mar = c(10, 6, 4, 2), mgp = c(4, 1, 0))                  # aucun fractionnement de la fenêtre graphique
 
 obs_comparaison_1970 <- data %>%
@@ -49,7 +48,5 @@ text(x = bar_positions,
      cex = 0.7)
 
 dev.off()
-
-return(chemin)
 
 }

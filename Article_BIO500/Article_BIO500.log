@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -933,7 +933,8 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 Package: pnasresearcharticle 2018/05/06 v1.3 PNAS two column research article style
 \@float@every@sigstatement=\toks54
 \c@sigstatement=\count381
-) (./Article_BIO500.aux)
+)
+No file Article_BIO500.aux.
 \openout1 = `Article_BIO500.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -961,7 +962,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 98.
-(./Article_BIO500.out) (./Article_BIO500.out)
 \@outlinefile=\write4
 \openout4 = `Article_BIO500.out'.
 
@@ -1118,86 +1118,40 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 138.
 
-
-<../figure_1_esp_par_annee.pdf, id=30, 1011.78pt x 433.62pt>
-File: ../figure_1_esp_par_annee.pdf Graphic file (type pdf)
-<use ../figure_1_esp_par_annee.pdf>
-Package pdftex.def Info: ../figure_1_esp_par_annee.pdf  used on input line 180.
-(pdftex.def)             Requested size: 246.09686pt x 105.467pt.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 180.
-<../figure_2_obs_par_classe.pdf, id=32, 1011.78pt x 433.62pt>
-File: ../figure_2_obs_par_classe.pdf Graphic file (type pdf)
-<use ../figure_2_obs_par_classe.pdf>
-Package pdftex.def Info: ../figure_2_obs_par_classe.pdf  used on input line 189.
-(pdftex.def)             Requested size: 246.09686pt x 105.467pt.
+LaTeX Warning: Reference `fig:esp.annee' on page 1 undefined on input line 152.
 
 
-[1{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
+LaTeX Warning: Reference `fig:obs.classe' on page 1 undefined on input line 157.
 
 
- <../figure_1_esp_par_annee.pdf>]
-<../figure_3_declin_classe.pdf, id=58, 1011.78pt x 433.62pt>
-File: ../figure_3_declin_classe.pdf Graphic file (type pdf)
-<use ../figure_3_declin_classe.pdf>
-Package pdftex.def Info: ../figure_3_declin_classe.pdf  used on input line 205.
-(pdftex.def)             Requested size: 246.09686pt x 105.467pt.
+LaTeX Warning: Reference `fig:declin' on page 1 undefined on input line 161.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--280
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--287
-
- []
+LaTeX Warning: Reference `fig:esp.annee' on page 1 undefined on input line 172.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--294
+! LaTeX Error: File `Figures/figure_1_esp_par_annee' not found.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180 ...inewidth]{Figures/figure_1_esp_par_annee}
+                                                   \caption{\label{fig:esp.a...
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--301
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--307
-
- []
-
-
-
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 315.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 315.
-[2 <../figure_2_obs_par_classe.pdf> <../figure_3_declin_classe.pdf>] 
-enddocument/afterlastpage (AED): lastpage setting LastPage.
-(./Article_BIO500.aux)
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-03-26>
- ***********
-Package rerunfilecheck Info: File `Article_BIO500.out' has not changed.
-(rerunfilecheck)             Checksum: 21CE3720D489050769DB3D78B092E0D8;471.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 30184 strings out of 471545
- 564524 string characters out of 5516905
- 988375 words of memory out of 5000000
- 55986 multiletter control sequences out of 15000+600000
- 698702 words of font info for 177 fonts, out of 8000000 for 9000
+ 30024 strings out of 471545
+ 562128 string characters out of 5516905
+ 970375 words of memory out of 5000000
+ 55916 multiletter control sequences out of 15000+600000
+ 684852 words of font info for 138 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 117i,14n,121p,1011b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Article_BIO500.pdf (2 pages, 184567 bytes).
-PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 16 named destinations out of 1000 (max. 500000)
- 54340 words of extra memory for PDF output out of 61914 (max. 10000000)
-
+ 117i,6n,121p,1011b,426s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
