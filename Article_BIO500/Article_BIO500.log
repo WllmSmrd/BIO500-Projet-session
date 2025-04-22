@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 19:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  21 APR 2025 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -965,9 +965,6 @@ Package hyperref Info: Link coloring ON on input line 98.
 \@outlinefile=\write4
 \openout4 = `Article_BIO500.out'.
 
-(c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/draftwatermark/draftwatermark.sty
-Package: draftwatermark 2024/03/04 3.3 Put a gray textual watermark on document pages
-)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1136,16 +1133,11 @@ Package pdftex.def Info: ../figure_2_obs_par_classe.pdf  used on input line 189.
 (pdftex.def)             Requested size: 246.09686pt x 105.467pt.
 
 
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 203.
-(c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1bch.fd
-File: t1bch.fd 2004/10/18 font definitions for T1/bch.
-) (c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-bch.cfg
-File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
-) [1{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
+[1{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
  <../figure_1_esp_par_annee.pdf>]
-<../figure_3_declin_classe.pdf, id=59, 1011.78pt x 433.62pt>
+<../figure_3_declin_classe.pdf, id=58, 1011.78pt x 433.62pt>
 File: ../figure_3_declin_classe.pdf Graphic file (type pdf)
 <use ../figure_3_declin_classe.pdf>
 Package pdftex.def Info: ../figure_3_declin_classe.pdf  used on input line 205.
@@ -1194,18 +1186,18 @@ Package rerunfilecheck Info: File `Article_BIO500.out' has not changed.
 (rerunfilecheck)             Checksum: 21CE3720D489050769DB3D78B092E0D8;471.
  ) 
 Here is how much of TeX's memory you used:
- 30351 strings out of 471545
- 568385 string characters out of 5516905
+ 30184 strings out of 471545
+ 564524 string characters out of 5516905
  988375 words of memory out of 5000000
- 56136 multiletter control sequences out of 15000+600000
- 705034 words of font info for 182 fonts, out of 8000000 for 9000
+ 55986 multiletter control sequences out of 15000+600000
+ 698702 words of font info for 177 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  117i,14n,121p,1011b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Article_BIO500.pdf (2 pages, 189878 bytes).
+<c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/Owner/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Article_BIO500.pdf (2 pages, 184567 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 147 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  16 named destinations out of 1000 (max. 500000)
- 56900 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 54340 words of extra memory for PDF output out of 61914 (max. 10000000)
 
