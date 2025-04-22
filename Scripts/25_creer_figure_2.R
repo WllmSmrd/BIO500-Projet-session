@@ -7,7 +7,7 @@
 
 creer.figure.2 <- function(data){
   
-chemin <- "figure_2_obs_par_classe.pdf"
+chemin <- "Figures/figure_2_obs_par_classe.pdf"
   
   #Figure 2 (Nombre d'observations total par classe)
   pdf(chemin, width = 14, height = 6) #pour exportation de la figure en pdf

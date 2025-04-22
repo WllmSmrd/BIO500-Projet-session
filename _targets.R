@@ -248,7 +248,7 @@ list(
       figure_3
       
       rmarkdown::render(
-        "./Article_BIO500.Rmd"
+        "./Article_BIO500/Article_BIO500.Rmd"
       )
     },
     format = "file"

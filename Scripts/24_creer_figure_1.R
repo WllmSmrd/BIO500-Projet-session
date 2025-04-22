@@ -7,7 +7,7 @@
 
 creer.figure.1 <- function(data){
 
-chemin <- "figure_1_esp_par_annee.pdf"
+chemin <- "Figures/figure_1_esp_par_annee.pdf"
   
 pdf(chemin, width = 14, height = 6) #pour exportation de la figure en pdf
 par(mfrow = c(1,1), mar = c(7, 6, 4, 2), mgp = c(4, 1, 0))   

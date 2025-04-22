@@ -8,7 +8,7 @@
 
 creer.figure.3 <- function(data){
 
-  chemin <- "figure_3_declin_classe.pdf"
+  chemin <- "Figures/figure_3_declin_classe.pdf"
   
 #Figure 3 (déclin des taxons depuis 1970)
 pdf(chemin, width = 14, height = 6) #pour exportation de la figure en pdf
