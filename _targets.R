@@ -11,7 +11,7 @@ library(stringr)
 library(RSQLite)
 library(rticles)
 
-tar_option_set(packages = c("dplyr", "tidyverse", "stringr", "RSQLite"))
+tar_option_set(packages = c("dplyr", "tidyverse", "stringr", "RSQLite", "rticles", "targets", "tarchetypes"))
 
 # Scripts R
 source("./Scripts/1_importer_taxo.R")
