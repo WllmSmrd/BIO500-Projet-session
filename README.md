@@ -40,13 +40,11 @@ Dossiers:
 - `Scripts` comprend l'ensemble des scripts créés pour l'analyse
 - `_targets` comprend toutes les targets créées dans le pipeline du projet
 - `Article_BIO500` comprend tous les fichiers associés à la création du rapport
+- `Figures` comprendra les 3 figures en pdf qui seront produites dans le pipeline
 
 Fichiers:
 
 - `README.md` le présent document expliquant l'organisation du répertoire
-- `figure_1_esp_par_annee.pdf` figure 1 du rapport
-- `figure_2_obs_par_classe.pdf` figure 2 du rapport
-- `figure_3_declin_classe.pdf` figure 1 du rapport
 - `database_series_temporelles.db` serveur de la base de données SQL du projet
 - `Execution_targets.R` comprend les quelques lignes de code permettant d'exécuter le pipeline target
 
