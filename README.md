@@ -26,10 +26,29 @@ de l'organisation Biodiversité Québec.
 
 #Méthodes
 
+Création d'une base de données SQL à partir des données nettoyées issues des séries 
+temporelles. Les analyses et la visualisation ont été effectuées essentiellement au 
+travers de la production de 3 figures, et se sont faites à partir de l'extraction des 
+données de la base de données SQL.
 
 
 #Résultats 
 
+Résultats des 3 questions de recherche :
+
+1. Question : Observe-t-on un déclin de la biodiversité à travers les années ? 
+   Réponse : Augmentation dans la richesse spécifique entre les années 1950 et ~ 1993. 
+             Forte augmentation du nombre d’espèces observées dans les années 1970. 
+             Déclin dans l’abondance des espèces à partir de l’année 1995, suivi 
+             d’une tendance générale au déclin s’aggravant d’années en années. 
+
+2. Question : Quel taxon est le plus et le moins observé à travers les années ? 
+   Réponse : Teleostei représente la classe qui cumule le plus grand nombre total d’observations, 
+             à l’opposé de Petromyzonti.
+
+3. Question : Quel taxon a le plus décliné depuis les années 1970 ?
+   Réponse : Aves, plus généralement considérée comme les oiseaux, est la classe qui a le plus 
+             décliné avec une diminution de 99%. 
 
 
 ### STRUCTURE DU REPERTOIRE ####################################################
@@ -174,7 +193,7 @@ Les scripts suivant regroupent les fonctions utilisées pour produire les figure
 ### INSTRUCTIONS ##################################################
 
 Pour exécuter le projet
-  - ouvrir le fichier Execution_targets.R
+  - ouvrir le fichier `Execution_targets.R`
   - éxécuter le code du script
 
 
