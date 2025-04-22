@@ -220,25 +220,38 @@ list(
 
   # 24/ Figure pour l'analyse de la question 1 (biodiversité à travers les années)
   tar_target(figure_1, 
-    creer.figure.1(biodiv_years)
+    creer.figure.1(biodiv_years),
+    format = "file"
   ),
 
   # 25/ Figure pour l'analyse de la question 2 (taxons à travers les années)
   tar_target(figure_2, 
-    creer.figure.2(obs_years_taxon)
+    creer.figure.2(obs_years_taxon),
+    format ="file"
   ),
 
   # 26/ Figure pour l'analyse de la question 3
   tar_target(figure_3,
-    creer.figure.3(obs_years_taxon)
+    creer.figure.3(obs_years_taxon),
+    format = "file"
   ),
 
 
 
 ### PRODUCTION DU RAPPORT ######################################################
 
-  tar_render(
-    Article_BIO500, 
-    "./Article_BIO500/Article_BIO500.Rmd")
+  tar_target(
+    Article, 
+    {
+      figure_1
+      figure_2
+      figure_3
+      
+      rmarkdown::render(
+        "./Article_BIO500.Rmd"
+      )
+    },
+    format = "file"
+  )
 
 )

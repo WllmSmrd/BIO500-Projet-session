@@ -1,17 +1,13 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-requete_biodiv|stem|caa22259382ecb1c|cc27d7f40eac9817|2c5a8ca3d7b9eee4|-1675992851||t20200.1042882235s|s165b|165|rds|local|vector|||0.01||
-requete_taxons|stem|503e2cb493b95140|eabbf1c98106b991|0449f1867b93f2e0|-552755373||t20200.1042885353s|s201b|201|rds|local|vector|||0||
-creer_tables_sql|stem|210a114a0989db15|cade76da8346285c|83773ccfcbb03084|117484581||t20200.1042896046s|s667b|667|rds|local|vector|||0.04|Closing open result set, pending rows. Closing open result set, pending rows. There are 1 result in use. The connection will be released when they are closed|
-path_taxo|stem|590e4305b415607b|4af7179121188dfa|2c530c1562a7fbd1|1792166754|./Data/taxonomie.csv|t20199.7839546372s|s66722b|66722|file|local|vector|||0||
 Separer.coordo.gps|function|0a76c0b65e1cfdaa
 combiner.csv|function|0115bb3e57f1bfe1
 assigner.type.obs|function|861f0b1860e248c2
 selection_taxons|object|59c1562d2557e7cb
-creer.figure.1|function|41909e3a55f44426
+creer.figure.1|function|472de0b8f5db07d0
 insert.na|function|7e1a3705efb8adff
-creer.figure.2|function|1fcdcc2b932652b9
+creer.figure.2|function|553c82eface25b45
 Verifier.abondance.negative|function|a8bc2271f2b743a3
-creer.figure.3|function|7e08bd01c1600fe0
+creer.figure.3|function|1196e2441df7efb2
 Supprimer.doublons|function|441b48415384cc33
 import.taxo|function|ac61f52271d3e2cc
 Detecter.special.char.obs|function|25faa6bd44f231b9
@@ -31,5 +27,21 @@ Separer.annee.abondance|function|9a9716e6684d006c
 selection_biodiv|object|430b81a8523cd762
 injection_taxo|function|28b570a7acd9f250
 creer.col.notes|function|55c3ce0cfc6c6c88
-path_obs|stem|9864db651ec01e32|61fe591de2722ccd|2c530c1562a7fbd1|1105902509|./Data/series_temporelles|t20199.7839546142s|s65536b|65536|file|local|vector|||0||
-Article_BIO500|stem||5ad69eb388c0ca56|2c530c1562a7fbd1|385178404||t20200.1043066956s||0|file|local|vector|||1.37||Cannot find the files ..figure_1_esp_par_annee.pdf
+path_obs|stem|9864db651ec01e32|61fe591de2722ccd|2c530c1562a7fbd1|1105902509|./Data/series_temporelles|t20199.7839546257s|s3625187b|3625187|file|local|vector|||0||
+requete_biodiv|stem|caa22259382ecb1c|cc27d7f40eac9817|2c5a8ca3d7b9eee4|-1675992851||t20200.1545904309s|s165b|165|rds|local|vector|||0||
+requete_taxons|stem|503e2cb493b95140|eabbf1c98106b991|0449f1867b93f2e0|-552755373||t20200.1545909469s|s201b|201|rds|local|vector|||0.02||
+creer_tables_sql|stem|210a114a0989db15|cade76da8346285c|83773ccfcbb03084|117484581||t20200.1545924411s|s667b|667|rds|local|vector|||0.08|Closing open result set, pending rows. Closing open result set, pending rows. There are 1 result in use. The connection will be released when they are closed|
+path_taxo|stem|590e4305b415607b|4af7179121188dfa|2c530c1562a7fbd1|1792166754|./Data/taxonomie.csv|t20199.7839546372s|s66722b|66722|file|local|vector|||0||
+donnees|stem|b94963cc19a8c407|e979d13d5b26aa07|b0d8edd2d2b5242f|-1375965411||t20200.1546051794s|s286866b|286866|rds|local|vector|||0.91||
+biodiv_years|stem|24e4eb51e3d4b541|3b67165f020b62a8|853895088c26d1c7|-182229027||t20200.1546132136s|s461b|461|rds|local|vector|||0.66||
+obs_years_taxon|stem|a77fa0131eadf477|4d606023a8fb6774|fce2330f3d7c38e2|1091524344||t20200.1546151944s|s1344b|1344|rds|local|vector|||0.14||
+taxo|stem|d1244e7a6b59bb7f|9cd63624f73bd83d|3aeedcf42f1f7ff5|-1810004822||t20200.1546157622s|s16550b|16550|rds|local|vector|||0.02||
+obs_clean|stem|781bd6e4cf2dca77|97202d865c254c8d|4e49325f20a283b5|1945789481||t20200.1546654024s|s339130b|339130|rds|local|vector|||3.96|There was 1 warning in mutate.ℹ In argument years  as.integeryears.Caused by warning NAs introduits lors de la conversion automatique|
+figure_1|stem|d230df824cc65952|e2ed5ca9e9da5539|e6d6408bdb146fa6|-247678157|figure_1_esp_par_annee.pdf|t20200.1546672264s|s5006b|5006|file|local|vector|||0.12||
+figure_2|stem|3b85f57e9b1bbeb6|e300b0e949b73928|de1a9d666cd43248|-356367554|figure_2_obs_par_classe.pdf|t20200.1546689283s|s4779b|4779|file|local|vector|||0.09||
+figure_3|stem|ad38209d865f3671|5266747d925ae651|e8f212e7a75c63e2|-425019455|figure_3_declin_classe.pdf|t20200.1546706564s|s4922b|4922|file|local|vector|||0.11||
+table_taxo|stem|bd413c9f4ae51593|0cd2bbda71f67937|f9800b5a0dfe2470|-1480595621||t20200.154672124s|s16556b|16556|rds|local|vector|||0.08||
+table_ref|stem|b11f9e09eed0eca8|23a7de7cd4bb835f|a1deda2e42945f41|-917293160||t20200.1546752125s|s18785b|18785|rds|local|vector|||0.22||
+table_obs|stem|96c5e245b5f1c057|02c3b92d8a9fc095|14f5edb5861ac1ae|-1878288736||t20200.1546785186s|s303290b|303290|rds|local|vector|||0||
+Article|stem|1d4276a237378af6|367372c08d4e8203|776bdb3473263f7b|-1895439853|C:/Users/Owner/Documents/Personnel 16-12-2024/Ecole/UdeS/Baccalaureat_ecologie/Hiv2025/BIO500/R/Projet/BIO500-Projet-session/Article_BIO500.pdf|t20200.1548297962s|s184854b|184854|file|local|vector|||13.06|Package microtype Warning Unable to apply patch eqnum on input line 98.|
+injection_sql|stem|4b8fd5580e088aa1|59641fd1974a0030|5fe936924cbcecaf|-1799022650||t20200.1548387847s|s1323b|1323|rds|local|vector|||0.68||

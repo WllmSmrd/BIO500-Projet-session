@@ -7,9 +7,9 @@
 
 creer.figure.1 <- function(data){
 
-
+chemin <- "figure_1_esp_par_annee.pdf"
   
-pdf("figure_1_esp_par_annee.pdf", width = 14, height = 6) #pour exportation de la figure en pdf
+pdf(chemin, width = 14, height = 6) #pour exportation de la figure en pdf
 par(mfrow = c(1,1), mar = c(7, 6, 4, 2), mgp = c(4, 1, 0))   
 
 plot(data$years,
@@ -22,5 +22,7 @@ plot(data$years,
       main = "Richesse spécifique par année")
 
 dev.off()
+
+return(chemin)
 
 }
